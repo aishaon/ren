@@ -1,0 +1,183 @@
+You are a senior full-stack UI/UX web developer and system architect.
+
+Your task is to generate a COMPLETE multi-page HTML website template for an organization called:
+
+"Rangpur Entrepreneurs Network (REN)"
+
+This is a hybrid platform:
+1) Organizational Website
+2) Multi-Vendor Marketplace
+3) Entrepreneur Community System
+
+⚠️ IMPORTANT RULES:
+- Generate ONLY HTML5 + TailwindCSS (CDN based)
+- No backend code required
+- Clean, modern, responsive UI
+- Use reusable components (header, footer, cards)
+- Each page must be separate (multi-page structure)
+- Use professional business design (like startup platforms)
+- Include dummy data for demo
+- All pages must be interlinked
+- Use Bangla + English mixed content where appropriate
+
+-----------------------------------
+
+🎯 MAIN WEBSITE PAGES:
+
+1. Home Page
+- Hero section (REN intro)
+- Featured entrepreneurs
+- Featured products/services
+- Call to action (Join REN / Become Vendor)
+- Events preview
+- Testimonials
+
+2. About Page
+- About REN
+- Mission & Vision
+- Team Members
+- Partners & Sponsors
+
+3. Membership Page
+- Membership benefits
+- Pricing plans (Free / Premium / Verified)
+- Apply form UI
+
+4. Entrepreneur Directory Page
+- Grid/list of entrepreneurs
+- Filter (category, location)
+- Search bar
+
+5. Single Entrepreneur Profile Page
+- Profile details
+- Business info
+- Products/services
+- Reviews & ratings
+
+-----------------------------------
+
+🛒 MARKETPLACE PAGES:
+
+6. Marketplace (Shop Page)
+- Product grid
+- Category sidebar
+- Filter + search
+
+7. Product Details Page
+- Images gallery
+- Price
+- Vendor info
+- Add to cart button
+
+8. Cart Page
+- Product list
+- Quantity update
+- Total price
+
+9. Checkout Page
+- Billing details form
+- Payment method (bkash/nagad/cod UI)
+- Order summary
+
+10. Order Success Page
+
+-----------------------------------
+
+👤 USER DASHBOARD:
+
+11. User Dashboard
+- Overview (orders, wallet, activity)
+
+12. Vendor Dashboard
+- Sales stats
+- Orders list
+- Earnings
+
+13. Add Product Page
+- Form UI (name, price, category, images)
+
+14. Manage Products Page
+
+15. Order Management Page
+
+-----------------------------------
+
+💰 WALLET & COMMISSION SYSTEM:
+
+16. Wallet Page
+- Balance
+- Transaction history
+
+17. Withdraw Request Page
+- Withdraw form
+- Request history
+
+-----------------------------------
+
+📢 COMMUNITY & EVENT:
+
+18. Events Page
+- Event list
+
+19. Event Details Page
+
+20. Blog Page
+
+21. Blog Details Page
+
+22. Community Forum Page (UI only)
+
+-----------------------------------
+
+📌 AUTHENTICATION PAGES:
+
+23. Login Page
+24. Register Page
+
+-----------------------------------
+
+⚙️ ADMIN PANEL (UI ONLY):
+
+25. Admin Dashboard
+- Stats (users, sales, commission)
+
+26. Manage Users Page
+
+27. Manage Vendors Page
+
+28. Manage Commission Settings Page
+
+29. Reports Page
+
+-----------------------------------
+
+🎨 DESIGN REQUIREMENTS:
+
+- Use TailwindCSS (CDN)
+- Clean SaaS-style UI
+- Card-based layout
+- Soft shadows, rounded corners
+- Mobile responsive
+- Navbar + Footer on all pages
+
+-----------------------------------
+
+📦 OUTPUT FORMAT:
+
+- Generate ALL pages separately
+- Each page must start with proper HTML structure
+- Use consistent design system
+- Use proper page titles
+- Include navigation links between pages
+
+-----------------------------------
+
+🎯 BONUS:
+
+- Add modal UI for login/register
+- Add notification dropdown UI
+- Add sample charts (dashboard)
+
+-----------------------------------
+
+Generate page by page
