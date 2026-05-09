@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Success - REN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#0f172a',
+                        accent: '#8b5cf6',
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .hero-pattern { background-image: radial-gradient(#e2e8f0 1px, transparent 1px); background-size: 32px 32px; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-primary/10 selection:text-primary min-h-screen flex flex-col items-center justify-center hero-pattern px-6">
+
+    <div class="max-w-2xl w-full">
+        <div class="bg-white rounded-[3.5rem] shadow-2xl shadow-blue-100 p-12 lg:p-20 border border-slate-100 text-center relative overflow-hidden">
+            <!-- Decorative background blob -->
+            <div class="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
+
+            <div class="relative z-10">
+                <div class="w-24 h-24 bg-green-50 text-green-500 rounded-[2rem] flex items-center justify-center text-4xl mx-auto mb-10 shadow-lg shadow-green-100 border-4 border-white">
+                    <i class="fa-solid fa-check-double"></i>
+                </div>
+
+                <h1 class="text-4xl lg:text-5xl font-black text-secondary mb-6 tracking-tight">Order Confirmed!</h1>
+                <p class="text-lg text-slate-500 font-medium mb-12 leading-relaxed">
+                    Thank you for supporting local entrepreneurs. Your order <span class="text-primary font-black">#REN-8842</span> has been placed successfully and is now being processed.
+                </p>
+
+                <div class="grid grid-cols-2 gap-6 mb-12">
+                    <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Estimated Delivery</p>
+                        <p class="font-extrabold text-secondary">May 05, 2026</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Order Total</p>
+                        <p class="font-extrabold text-secondary">৳6,300</p>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <a href="user-dashboard.html" class="block w-full py-5 bg-primary text-white rounded-2xl font-black text-lg hover:bg-blue-700 transition shadow-xl shadow-primary/20">
+                        Track Order in Dashboard
+                    </a>
+                    <a href="shop.html" class="block w-full py-5 bg-white border-2 border-slate-100 text-secondary rounded-2xl font-bold hover:border-primary hover:text-primary transition">
+                        Continue Shopping
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <p class="mt-12 text-center text-[10px] font-black text-slate-300 uppercase tracking-[0.3em]">
+            Rangpur Entrepreneurs Network &bull; Digital Commerce Excellence
+        </p>
+    </div>
+
+</body>
+</html>

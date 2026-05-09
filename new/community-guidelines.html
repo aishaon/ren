@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Guidelines — REN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#030712',
+                        accent: '#c084fc',
+                    },
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        '4xl': '2.5rem',
+                        '5xl': '4rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Outfit:wght@300;400;600;700;900&display=swap');
+        body { font-family: 'DM Sans', sans-serif; }
+        .font-display { font-family: 'Outfit', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); }
+    </style>
+</head>
+<body class="bg-secondary text-slate-300 selection:bg-primary/30 selection:text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-[100] px-6 py-6">
+        <div class="max-w-7xl mx-auto glass rounded-3xl px-8 py-5 flex items-center justify-between shadow-2xl">
+            <a href="index.html" class="flex items-center space-x-4">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white shadow-lg">
+                    <span class="font-display font-black text-xl">R</span>
+                </div>
+                <span class="font-display font-black text-xl text-white tracking-tighter">REN</span>
+            </a>
+            <a href="index.html" class="text-xs font-black uppercase tracking-widest text-slate-400 hover:text-white transition">Exit Guidelines</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-56 pb-24 text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-8 relative z-10">
+            <h2 class="text-[10px] font-black text-accent uppercase tracking-[0.5em] mb-8">Professional Standards</h2>
+            <h1 class="font-display text-5xl lg:text-7xl font-black text-white leading-tight tracking-tighter mb-10">The REN Code of <span class="italic font-light opacity-30 tracking-normal">Conduct.</span></h1>
+            <p class="text-xl text-slate-500 leading-relaxed max-w-2xl mx-auto">Ensuring a high-integrity ecosystem for North Bengal's most visionary entrepreneurs.</p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="max-w-3xl mx-auto px-8 pb-40">
+        <div class="space-y-24">
+            <section>
+                <div class="flex items-center space-x-6 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary"><i class="fa-solid fa-handshake"></i></div>
+                    <h2 class="text-2xl font-black text-white tracking-tight">Radical Professionalism</h2>
+                </div>
+                <p class="text-lg text-slate-500 leading-relaxed">All interactions within the REN network, whether in the community forum or marketplace communications, must adhere to the highest standards of professional courtesy. We value clear, honest, and respectful dialogue.</p>
+            </section>
+
+            <section>
+                <div class="flex items-center space-x-6 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-accent"><i class="fa-solid fa-gem"></i></div>
+                    <h2 class="text-2xl font-black text-white tracking-tight">Quality & Authenticity</h2>
+                </div>
+                <p class="text-lg text-slate-500 leading-relaxed">Vendors are responsible for ensuring that all marketplace listings are accurate and authentic. Misrepresentation of materials, origins, or production processes is strictly prohibited and results in immediate membership review.</p>
+            </section>
+
+            <section>
+                <div class="flex items-center space-x-6 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white"><i class="fa-solid fa-users-rays"></i></div>
+                    <h2 class="text-2xl font-black text-white tracking-tight">Collaborative Growth</h2>
+                </div>
+                <p class="text-lg text-slate-500 leading-relaxed">The REN network is built on the principle of collaborative intelligence. Members are encouraged to share insights and support peers. Predatory business practices against other members are not tolerated.</p>
+            </section>
+        </div>
+
+        <div class="mt-32 p-16 bg-white/5 border border-white/10 rounded-[3.5rem] text-center">
+            <h3 class="text-2xl font-black text-white mb-6">Reporting Violations</h3>
+            <p class="text-slate-500 leading-relaxed mb-10">If you encounter conduct that violates these standards, please report it to our governance board.</p>
+            <a href="contact.html" class="inline-block px-12 py-5 bg-white text-secondary rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-primary hover:text-white transition-all">Submit a Report</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="p-20 text-center border-t border-white/5 bg-[#050914]">
+        <p class="text-[10px] font-black uppercase tracking-[0.5em] text-slate-600">&copy; 2026 REN • COMMUNITY STANDARDS</p>
+    </footer>
+
+</body>
+</html>

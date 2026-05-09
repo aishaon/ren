@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - REN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#0f172a',
+                        accent: '#8b5cf6',
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); }
+        .hero-pattern { background-image: radial-gradient(#e2e8f0 1px, transparent 1px); background-size: 32px 32px; }
+    </style>
+</head>
+<body class="bg-slate-50/50 text-slate-900 selection:bg-primary/10 selection:text-primary min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-4 py-4">
+        <div class="max-w-7xl mx-auto glass border border-white/20 rounded-2xl shadow-sm px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white shadow-lg">
+                    <i class="fa-solid fa-r text-xl font-black"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-secondary to-slate-600">REN</span>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-10">
+                <a href="index.html" class="text-sm font-bold text-slate-500 hover:text-primary transition">Home</a>
+                <a href="about.html" class="text-sm font-bold text-slate-500 hover:text-primary transition">About</a>
+                <a href="membership.html" class="text-sm font-bold text-slate-500 hover:text-primary transition">Membership</a>
+                <a href="directory.html" class="text-sm font-bold text-slate-500 hover:text-primary transition">Entrepreneurs</a>
+                <a href="shop.html" class="text-sm font-bold text-slate-500 hover:text-primary transition">Marketplace</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="register.html" class="bg-secondary text-white px-6 py-3 rounded-xl text-sm font-bold hover:bg-slate-800 transition shadow-xl shadow-slate-200">Join Network</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-40 pb-16 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h1 class="text-4xl lg:text-5xl font-black text-secondary mb-4">How can we help?</h1>
+            <p class="text-lg text-slate-500 font-medium">Find answers to common questions about the REN platform.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-20">
+        <div class="space-y-12">
+            
+            <!-- Category: Membership -->
+            <div>
+                <h2 class="text-xs font-black text-primary uppercase tracking-[0.3em] mb-8 flex items-center">
+                    <i class="fa-solid fa-id-card-clip mr-3"></i> Membership & Joining
+                </h2>
+                <div class="space-y-4">
+                    <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm">
+                        <h4 class="font-bold text-secondary mb-4">How do I join the network?</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">You can sign up through our registration page. Choose a plan that fits your business, fill out your details, and you're ready to go!</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm">
+                        <h4 class="font-bold text-secondary mb-4">What documents are needed for verification?</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">For Elite verification, we typically require a valid NID, trade license (if applicable), and a physical verification of your business premises.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Marketplace -->
+            <div>
+                <h2 class="text-xs font-black text-primary uppercase tracking-[0.3em] mb-8 flex items-center">
+                    <i class="fa-solid fa-shop mr-3"></i> Selling on Marketplace
+                </h2>
+                <div class="space-y-4">
+                    <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm">
+                        <h4 class="font-bold text-secondary mb-4">What is the platform fee?</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">We charge a standard 10% commission on every sale made through the platform. This covers technical maintenance and marketing.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm">
+                        <h4 class="font-bold text-secondary mb-4">How do I get paid?</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">Once a customer receives their order, your funds enter a 7-day clearance period. After that, you can request a payout to your bKash, Nagad, or Bank account.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: General -->
+            <div>
+                <h2 class="text-xs font-black text-primary uppercase tracking-[0.3em] mb-8 flex items-center">
+                    <i class="fa-solid fa-circle-question mr-3"></i> General Questions
+                </h2>
+                <div class="space-y-4">
+                    <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm">
+                        <h4 class="font-bold text-secondary mb-4">Where is REN based?</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">Our main office is located in the Zilla Parishad Bhaban, Rangpur Sadar. However, we serve entrepreneurs across the entire division.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-24 p-12 bg-secondary rounded-[3rem] text-center text-white shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+            <h3 class="text-2xl font-black mb-4 relative z-10">Still have questions?</h3>
+            <p class="text-slate-400 mb-10 relative z-10">Our support team is just a message away.</p>
+            <a href="contact.html" class="inline-block px-10 py-4 bg-primary text-white rounded-xl font-bold hover:bg-blue-700 transition shadow-xl shadow-primary/20 relative z-10">Contact Support</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-slate-400 py-24">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-[10px] font-black uppercase tracking-[0.3em]">&copy; 2026 Rangpur Entrepreneurs Network</p>
+        </div>
+    </footer>
+
+</body>
+</html>

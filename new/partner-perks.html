@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Privileges & Perks — REN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a1c2e',
+                        accent: '#4f46e5',
+                        surface: '#ffffff',
+                    },
+                    fontFamily: {
+                        serif: ['Fraunces', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        syne: ['Syne', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,900;1,9..144,300&family=Inter:wght@400;700&family=Syne:wght@400;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Fraunces', serif; }
+        .font-syne { font-family: 'Syne', sans-serif; }
+        .border-elegant { border: 1px solid rgba(26, 28, 46, 0.08); }
+    </style>
+</head>
+<body class="bg-slate-50/50 text-primary antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-[100] bg-white border-b border-elegant">
+        <div class="max-w-[1600px] mx-auto px-10 h-24 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white">
+                    <span class="text-xs font-black">R</span>
+                </div>
+                <span class="font-syne font-extrabold text-2xl tracking-tighter uppercase">Network.</span>
+            </a>
+            <a href="membership.html" class="text-[10px] font-black uppercase tracking-widest hover:text-accent transition-colors">Join the Collective</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-56 pb-24 bg-white border-b border-elegant text-center">
+        <div class="max-w-4xl mx-auto px-10">
+            <h2 class="text-[10px] font-black uppercase tracking-[0.6em] mb-12 opacity-40">Exclusive Privileges</h2>
+            <h1 class="font-serif text-6xl lg:text-8xl font-light italic tracking-tighter mb-10">The <span class="not-italic font-semibold text-primary uppercase">Collective</span> Advantage.</h1>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">Access a world-class suite of benefits curated specifically for the modern entrepreneur. From global logistics to premium financial services.</p>
+        </div>
+    </header>
+
+    <!-- Perks Grid -->
+    <main class="max-w-7xl mx-auto px-10 py-40">
+        <div class="grid lg:grid-cols-2 gap-10">
+            
+            <!-- Category: Logistics -->
+            <div class="bg-white p-16 rounded-[3.5rem] border border-elegant hover:shadow-2xl transition duration-700">
+                <div class="flex items-center justify-between mb-12">
+                    <h3 class="font-serif text-3xl font-semibold italic">Logistics & Supply</h3>
+                    <div class="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-primary shadow-sm"><i class="fa-solid fa-truck-fast"></i></div>
+                </div>
+                <div class="space-y-8">
+                    <div class="p-8 rounded-3xl bg-slate-50/50 border border-transparent hover:border-accent/20 transition-all cursor-pointer group">
+                        <h4 class="text-lg font-bold text-secondary mb-2 group-hover:text-accent">Global Forwarding Discount</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed">20% reduced rates on all international shipments through our primary logistics partner.</p>
+                    </div>
+                    <div class="p-8 rounded-3xl bg-slate-50/50 border border-transparent hover:border-accent/20 transition-all cursor-pointer group">
+                        <h4 class="text-lg font-bold text-secondary mb-2 group-hover:text-accent">Warehousing Priority</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed">First-access to bonded warehouse space in Dhaka and Chittagong ports.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Financial -->
+            <div class="bg-primary p-16 rounded-[3.5rem] text-white shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-3xl"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center justify-between mb-12 text-white">
+                        <h3 class="font-serif text-3xl font-semibold italic">Capital & Wealth</h3>
+                        <div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center shadow-lg"><i class="fa-solid fa-vault"></i></div>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-accent transition-all cursor-pointer group">
+                            <h4 class="text-lg font-bold text-white mb-2 group-hover:text-accent">Zero-Fee Merchant Accounts</h4>
+                            <p class="text-sm text-white/50 leading-relaxed font-light">Exclusive banking partnership providing members with fee-free digital payment collection.</p>
+                        </div>
+                        <div class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-accent transition-all cursor-pointer group">
+                            <h4 class="text-lg font-bold text-white mb-2 group-hover:text-accent">Direct Venture Line</h4>
+                            <p class="text-sm text-white/50 leading-relaxed font-light">Preferential consideration for the North Bengal Growth Fund applications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Technology -->
+            <div class="bg-white p-16 rounded-[3.5rem] border border-elegant hover:shadow-2xl transition duration-700">
+                <div class="flex items-center justify-between mb-12">
+                    <h3 class="font-serif text-3xl font-semibold italic">Digital Infrastructure</h3>
+                    <div class="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-primary shadow-sm"><i class="fa-solid fa-microchip"></i></div>
+                </div>
+                <div class="space-y-8">
+                    <div class="p-8 rounded-3xl bg-slate-50/50 border border-transparent hover:border-accent/20 transition-all cursor-pointer group">
+                        <h4 class="text-lg font-bold text-secondary mb-2 group-hover:text-accent">Cloud Credits Package</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed">৳50,000 in annual cloud computing credits for Member-tier technology vendors.</p>
+                    </div>
+                    <div class="p-8 rounded-3xl bg-slate-50/50 border border-transparent hover:border-accent/20 transition-all cursor-pointer group">
+                        <h4 class="text-lg font-bold text-secondary mb-2 group-hover:text-accent">SaaS Enterprise Suite</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed">Free access to premium CRM and project management tools used by the network.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="p-20 text-center border-t border-elegant bg-white">
+        <p class="text-[8px] font-black uppercase tracking-[0.5em] text-slate-300">&copy; 2026 REN COLLECTIVE • PRIVILEGE DIVISION</p>
+    </footer>
+
+</body>
+</html>

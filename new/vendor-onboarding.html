@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Onboarding — REN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a1c2e',
+                        accent: '#4f46e5',
+                        surface: '#ffffff',
+                    },
+                    fontFamily: {
+                        serif: ['Fraunces', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        syne: ['Syne', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,900;1,9..144,300&family=Inter:wght@400;700&family=Syne:wght@400;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Fraunces', serif; }
+        .font-syne { font-family: 'Syne', sans-serif; }
+        .border-elegant { border: 1px solid rgba(26, 28, 46, 0.08); }
+    </style>
+</head>
+<body class="bg-white text-primary antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-[100] bg-white border-b border-elegant">
+        <div class="max-w-[1600px] mx-auto px-10 h-24 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white">
+                    <span class="text-xs font-black">R</span>
+                </div>
+                <span class="font-syne font-extrabold text-2xl tracking-tighter uppercase">Network.</span>
+            </a>
+            <a href="vendor-dashboard.html" class="text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-accent transition-colors">Return to Dashboard</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-56 pb-24 border-b border-elegant text-center">
+        <div class="max-w-4xl mx-auto px-10">
+            <h2 class="text-[10px] font-black uppercase tracking-[0.6em] mb-12 opacity-40">Onboarding Protocol</h2>
+            <h1 class="font-serif text-6xl lg:text-8xl font-light italic tracking-tighter mb-10">The <span class="not-italic font-semibold text-primary uppercase">Entrepreneur's</span> Journey.</h1>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">A definitive guide to scaling your presence within the REN Collective. From initial setup to global distribution.</p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="max-w-7xl mx-auto px-10 py-40">
+        <div class="grid lg:grid-cols-4 gap-20">
+            
+            <!-- Step 1 -->
+            <div class="space-y-10 group">
+                <p class="text-[10px] font-black uppercase tracking-widest text-slate-200 group-hover:text-primary transition">Phase 01</p>
+                <h3 class="font-serif text-3xl font-semibold italic">Identity & Access</h3>
+                <p class="text-sm text-slate-400 leading-relaxed font-medium">Complete your personal profile and submit identity documents for initial verification. This unlocks the core portal tools.</p>
+                <div class="pt-10 border-t border-elegant">
+                    <ul class="space-y-4 text-[10px] font-black uppercase tracking-widest text-slate-300">
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-slate-100 mr-3"></i> Profile Setup</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-slate-100 mr-3"></i> NID Validation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="space-y-10 group">
+                <p class="text-[10px] font-black uppercase tracking-widest text-slate-200 group-hover:text-primary transition">Phase 02</p>
+                <h3 class="font-serif text-3xl font-semibold italic">Digital Storefront</h3>
+                <p class="text-sm text-slate-400 leading-relaxed font-medium">Author your marketplace listings. High-resolution imagery and compelling technical descriptions are mandatory.</p>
+                <div class="pt-10 border-t border-elegant">
+                    <ul class="space-y-4 text-[10px] font-black uppercase tracking-widest text-slate-300">
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-slate-100 mr-3"></i> Product Catalog</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-slate-100 mr-3"></i> Visual Assets</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="space-y-10 group">
+                <p class="text-[10px] font-black uppercase tracking-widest text-slate-200 group-hover:text-primary transition">Phase 03</p>
+                <h3 class="font-serif text-3xl font-semibold italic">Logistics Integration</h3>
+                <p class="text-sm text-slate-400 leading-relaxed font-medium">Configure your shipping zones and connect with our regional logistics partners for seamless fulfillment.</p>
+                <div class="pt-10 border-t border-elegant">
+                    <ul class="space-y-4 text-[10px] font-black uppercase tracking-widest text-slate-300">
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-slate-100 mr-3"></i> Courier Sync</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-slate-100 mr-3"></i> Zone Mapping</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="space-y-10 group">
+                <p class="text-[10px] font-black uppercase tracking-widest text-slate-200 group-hover:text-primary transition">Phase 04</p>
+                <h3 class="font-serif text-3xl font-semibold italic">Scaling Success</h3>
+                <p class="text-sm text-slate-400 leading-relaxed font-medium">Activate Elite verification and begin using our economic reports to optimize your regional growth strategy.</p>
+                <div class="pt-10 border-t border-elegant">
+                    <ul class="space-y-4 text-[10px] font-black uppercase tracking-widest text-slate-300">
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-slate-100 mr-3"></i> Elite Auditing</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-slate-100 mr-3"></i> Market Mastery</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="p-20 text-center border-t border-elegant bg-slate-50">
+        <p class="text-[8px] font-black uppercase tracking-[0.5em] text-slate-300">&copy; 2026 REN COLLECTIVE • VENDOR ENABLEMENT</p>
+    </footer>
+
+</body>
+</html>

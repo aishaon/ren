@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - REN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#0f172a',
+                        accent: '#8b5cf6',
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-primary/10 selection:text-primary min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-4 py-4">
+        <div class="max-w-7xl mx-auto glass border border-white/20 rounded-2xl shadow-sm px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/20">
+                    <i class="fa-solid fa-r text-xl font-black"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-secondary to-slate-600">REN</span>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-10">
+                <a href="shop.html" class="text-sm font-bold text-slate-500 hover:text-primary transition flex items-center">
+                    <i class="fa-solid fa-chevron-left mr-2 text-[10px]"></i> Continue Shopping
+                </a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="login.html" class="hidden sm:block text-sm font-bold text-slate-600 hover:text-primary transition">Login</a>
+                <a href="register.html" class="bg-secondary text-white px-6 py-3 rounded-xl text-sm font-bold hover:bg-slate-800 transition shadow-xl shadow-slate-200">Join Network</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-40 pb-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h1 class="text-4xl font-black text-secondary mb-12">Shopping Cart <span class="text-primary opacity-30">(3)</span></h1>
+
+            <div class="grid lg:grid-cols-3 gap-16">
+                
+                <!-- Items Column -->
+                <div class="lg:col-span-2 space-y-6">
+                    <!-- Item 1 -->
+                    <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm flex flex-col sm:flex-row gap-8 hover:shadow-xl transition duration-500">
+                        <div class="w-full sm:w-40 h-40 rounded-[2rem] overflow-hidden bg-slate-50 flex-shrink-0 shadow-inner">
+                            <img src="https://images.unsplash.com/photo-1590736962234-45520970677a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="flex-grow flex flex-col justify-between">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <p class="text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-2">Kamal Textiles</p>
+                                    <h3 class="text-2xl font-extrabold text-secondary mb-1">Handwoven Silk Sari</h3>
+                                    <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">In Stock • Ready to ship</p>
+                                </div>
+                                <button class="w-10 h-10 rounded-xl bg-slate-50 text-slate-300 hover:text-red-500 hover:bg-red-50 transition flex items-center justify-center">
+                                    <i class="fa-solid fa-trash-can text-sm"></i>
+                                </button>
+                            </div>
+                            <div class="flex justify-between items-end mt-8">
+                                <div class="flex items-center bg-slate-50 rounded-xl p-1 border border-slate-100">
+                                    <button class="w-8 h-8 rounded-lg hover:bg-white transition text-slate-400 flex items-center justify-center shadow-sm"><i class="fa-solid fa-minus text-[10px]"></i></button>
+                                    <span class="px-5 text-sm font-black text-secondary">1</span>
+                                    <button class="w-8 h-8 rounded-lg hover:bg-white transition text-slate-400 flex items-center justify-center shadow-sm"><i class="fa-solid fa-plus text-[10px]"></i></button>
+                                </div>
+                                <div class="text-2xl font-black text-secondary">৳4,500</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm flex flex-col sm:flex-row gap-8 hover:shadow-xl transition duration-500">
+                        <div class="w-full sm:w-40 h-40 rounded-[2rem] overflow-hidden bg-slate-50 flex-shrink-0 shadow-inner">
+                            <img src="https://images.unsplash.com/photo-1595122245592-4545362a7467?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="flex-grow flex flex-col justify-between">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <p class="text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-2">Green Agro</p>
+                                    <h3 class="text-2xl font-extrabold text-secondary mb-1">Pure Organic Honey (500g)</h3>
+                                    <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">In Stock • Fresh Batch</p>
+                                </div>
+                                <button class="w-10 h-10 rounded-xl bg-slate-50 text-slate-300 hover:text-red-500 hover:bg-red-50 transition flex items-center justify-center">
+                                    <i class="fa-solid fa-trash-can text-sm"></i>
+                                </button>
+                            </div>
+                            <div class="flex justify-between items-end mt-8">
+                                <div class="flex items-center bg-slate-50 rounded-xl p-1 border border-slate-100">
+                                    <button class="w-8 h-8 rounded-lg hover:bg-white transition text-slate-400 flex items-center justify-center shadow-sm"><i class="fa-solid fa-minus text-[10px]"></i></button>
+                                    <span class="px-5 text-sm font-black text-secondary">2</span>
+                                    <button class="w-8 h-8 rounded-lg hover:bg-white transition text-slate-400 flex items-center justify-center shadow-sm"><i class="fa-solid fa-plus text-[10px]"></i></button>
+                                </div>
+                                <div class="text-2xl font-black text-secondary">৳1,700</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summary Column -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-2xl shadow-blue-100 sticky top-40">
+                        <h2 class="text-xl font-extrabold text-secondary mb-10">Order Summary</h2>
+                        <div class="space-y-6 mb-10 pb-10 border-b border-slate-50">
+                            <div class="flex justify-between text-sm font-bold">
+                                <span class="text-slate-400 uppercase tracking-widest">Subtotal</span>
+                                <span class="text-secondary tracking-tighter">৳6,200</span>
+                            </div>
+                            <div class="flex justify-between text-sm font-bold">
+                                <span class="text-slate-400 uppercase tracking-widest">Delivery</span>
+                                <span class="text-secondary tracking-tighter">৳100</span>
+                            </div>
+                            <div class="flex justify-between text-sm font-bold">
+                                <span class="text-slate-400 uppercase tracking-widest">Fees</span>
+                                <span class="text-green-500 tracking-tighter">FREE</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center mb-10">
+                            <span class="text-lg font-black text-secondary uppercase tracking-widest">Total</span>
+                            <span class="text-3xl font-black text-primary tracking-tighter">৳6,300</span>
+                        </div>
+                        <a href="checkout.html" class="block w-full py-5 bg-primary text-white rounded-2xl text-center font-black text-lg hover:bg-blue-700 transition shadow-xl shadow-primary/30">Checkout</a>
+                        <div class="mt-8 flex items-center justify-center space-x-4 opacity-30 grayscale grayscale-0">
+                            <i class="fa-brands fa-cc-visa text-2xl"></i>
+                            <i class="fa-brands fa-cc-mastercard text-2xl"></i>
+                            <span class="text-[10px] font-black uppercase tracking-widest">bKash</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="p-12 text-center mt-auto">
+        <p class="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em]">&copy; 2026 Rangpur Entrepreneurs Network</p>
+    </footer>
+
+</body>
+</html>

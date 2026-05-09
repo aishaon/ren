@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details - REN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#0f172a',
+                        accent: '#8b5cf6',
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-primary/10 selection:text-primary min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-4 py-4">
+        <div class="max-w-7xl mx-auto glass border border-white/20 rounded-2xl shadow-sm px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white shadow-lg">
+                    <i class="fa-solid fa-r text-xl font-black"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-secondary to-slate-600">REN</span>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-10">
+                <a href="index.html" class="text-sm font-bold text-slate-500 hover:text-primary transition">Home</a>
+                <a href="events.html" class="text-sm font-bold text-primary flex items-center">
+                    <i class="fa-solid fa-chevron-left mr-2 text-[10px]"></i> Back to Events
+                </a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="register.html" class="bg-secondary text-white px-6 py-3 rounded-xl text-sm font-bold hover:bg-slate-800 transition">Join Network</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-40 pb-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-16 items-start">
+                
+                <!-- Left: Info -->
+                <div class="lg:col-span-2 space-y-12">
+                    <div class="aspect-video rounded-[3.5rem] overflow-hidden shadow-2xl border-8 border-white">
+                        <img src="https://images.unsplash.com/photo-1540575861501-7ad05823c9f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover" alt="Event Image">
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="flex items-center space-x-4">
+                            <span class="px-4 py-1.5 bg-blue-50 text-primary text-[10px] font-black uppercase tracking-[0.2em] rounded-full border border-blue-100">Workshop</span>
+                            <span class="text-slate-400 font-bold text-xs uppercase tracking-widest">Digital Skills Series</span>
+                        </div>
+                        <h1 class="text-4xl lg:text-5xl font-black text-secondary leading-tight">Digital Marketing Masterclass for Small Businesses</h1>
+                        
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-8 border-y border-slate-200">
+                            <div>
+                                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Date</p>
+                                <p class="font-bold text-secondary">May 15, 2026</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Time</p>
+                                <p class="font-bold text-secondary">10:00 AM</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Location</p>
+                                <p class="font-bold text-secondary">Online / Zoom</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Price</p>
+                                <p class="font-bold text-primary italic">Free for Members</p>
+                            </div>
+                        </div>
+
+                        <div class="prose prose-slate prose-lg max-w-none">
+                            <h3 class="text-2xl font-black text-secondary mb-6">About this event</h3>
+                            <p class="text-slate-600 leading-loose mb-8">Join our highly anticipated Digital Marketing Masterclass, specifically tailored for the unique challenges faced by small businesses in North Bengal. This session will cover essential strategies for social media growth, local SEO, and effective marketplace listing management.</p>
+                            <h4 class="text-xl font-bold text-secondary mb-4">What you will learn:</h4>
+                            <ul class="space-y-4 text-slate-500 list-none pl-0">
+                                <li class="flex items-start"><i class="fa-solid fa-circle-check text-primary mr-3 mt-1.5 text-xs"></i> Building a brand on Facebook & Instagram.</li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-check text-primary mr-3 mt-1.5 text-xs"></i> Optimizing product photos for higher conversion.</li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-check text-primary mr-3 mt-1.5 text-xs"></i> Handling online customer inquiries and service.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Register Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white p-10 lg:p-12 rounded-[3.5rem] border border-slate-100 shadow-2xl shadow-blue-100 sticky top-40">
+                        <h3 class="text-xl font-black text-secondary mb-8">Secure your spot</h3>
+                        <div class="space-y-6 mb-10">
+                            <div class="flex items-center space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                                <div class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-primary">
+                                    <i class="fa-solid fa-users"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-black text-secondary uppercase tracking-widest">Available Seats</p>
+                                    <p class="text-sm font-bold text-slate-400">45 / 100 remaining</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-2">Full Name</label>
+                                <input type="text" required class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-primary/30 outline-none transition-all font-medium" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-2">Member ID (Optional)</label>
+                                <input type="text" class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-primary/30 outline-none transition-all font-medium" placeholder="REN-XXXX">
+                            </div>
+                            <button type="submit" class="w-full py-5 bg-primary text-white rounded-2xl font-black text-lg hover:bg-blue-700 transition shadow-xl shadow-primary/30 uppercase tracking-widest">
+                                Register Now
+                            </button>
+                        </form>
+                        
+                        <p class="mt-8 text-center text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">
+                            <i class="fa-solid fa-lock mr-2 opacity-50"></i> Verified Registration
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-slate-400 py-24">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-[10px] font-black uppercase tracking-[0.3em]">&copy; 2026 Rangpur Entrepreneurs Network</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press & Media — REN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a1c2e',
+                        accent: '#4f46e5',
+                    },
+                    fontFamily: {
+                        serif: ['Fraunces', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        syne: ['Syne', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,900;1,9..144,300&family=Inter:wght@400;700&family=Syne:wght@400;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Fraunces', serif; }
+        .font-syne { font-family: 'Syne', sans-serif; }
+        .border-elegant { border: 1px solid rgba(26, 28, 46, 0.08); }
+    </style>
+</head>
+<body class="bg-white text-primary antialiased">
+
+    <!-- Navigation -->
+    <nav class="p-10 border-b border-elegant flex justify-between items-center bg-white sticky top-0 z-50">
+        <a href="index.html" class="font-syne font-black text-2xl tracking-tighter uppercase">REN.</a>
+        <a href="index.html" class="text-[10px] font-black uppercase tracking-widest hover:text-accent transition-colors">Exit Media Room</a>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-40 text-center">
+        <div class="max-w-4xl mx-auto px-10">
+            <h2 class="text-[10px] font-black uppercase tracking-[0.6em] mb-12 opacity-40">Media Center</h2>
+            <h1 class="font-serif text-6xl lg:text-8xl font-light italic tracking-tighter mb-10">Sharing the <span class="not-italic font-semibold text-primary uppercase">Legacy.</span></h1>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">Official brand assets, newsroom updates, and the verified data powering North Bengal's digital narrative.</p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="max-w-7xl mx-auto px-10 pb-40">
+        <div class="grid lg:grid-cols-3 gap-20">
+            
+            <!-- Brand Assets -->
+            <div class="lg:col-span-2">
+                <h3 class="font-serif text-3xl font-semibold mb-12 italic border-b border-elegant pb-6">Brand Assets</h3>
+                <div class="grid sm:grid-cols-2 gap-8">
+                    <div class="bg-slate-50 p-12 rounded-[2.5rem] border border-elegant group hover:bg-primary transition-all duration-500 cursor-pointer">
+                        <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-primary mb-8"><i class="fa-solid fa-file-pdf"></i></div>
+                        <h4 class="text-lg font-bold mb-4 group-hover:text-white transition">Visual Identity Guide</h4>
+                        <p class="text-xs text-slate-400 group-hover:text-white/60 transition uppercase tracking-widest">PDF • 4.2 MB</p>
+                    </div>
+                    <div class="bg-slate-50 p-12 rounded-[2.5rem] border border-elegant group hover:bg-primary transition-all duration-500 cursor-pointer">
+                        <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-primary mb-8"><i class="fa-solid fa-images"></i></div>
+                        <h4 class="text-lg font-bold mb-4 group-hover:text-white transition">Logo Collection</h4>
+                        <p class="text-xs text-slate-400 group-hover:text-white/60 transition uppercase tracking-widest">ZIP • 12.8 MB</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats & Quick Facts -->
+            <div class="bg-slate-50 p-12 rounded-[3.5rem] border border-elegant">
+                <h3 class="text-xs font-black uppercase tracking-[0.3em] mb-10 opacity-40">Quick Facts</h3>
+                <div class="space-y-10">
+                    <div>
+                        <p class="text-[8px] font-black uppercase tracking-widest text-slate-400 mb-2">Network Size</p>
+                        <p class="text-2xl font-syne font-black">500+ Entrepreneurs</p>
+                    </div>
+                    <div>
+                        <p class="text-[8px] font-black uppercase tracking-widest text-slate-400 mb-2">Regional Reach</p>
+                        <p class="text-2xl font-syne font-black">8 Districts</p>
+                    </div>
+                    <div>
+                        <p class="text-[8px] font-black uppercase tracking-widest text-slate-400 mb-2">Annual Impact</p>
+                        <p class="text-2xl font-syne font-black">৳12.4M Trade Vol.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="p-20 text-center border-t border-elegant">
+        <p class="text-[8px] font-black uppercase tracking-[0.5em] text-slate-300">&copy; 2026 REN COLLECTIVE • MEDIA RELATIONS</p>
+    </footer>
+
+</body>
+</html>

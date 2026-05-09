@@ -1,301 +1,102 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rangpur Entrepreneurs Network</title>
+    <title>Orders Management - REN Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
+    <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
 <body class="bg-gray-50">
 
-<!-- Top Bar - Desktop Only -->
-<div class="bg-blue-600 text-white text-sm py-2 hidden lg:block">
-    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-        <div class="flex items-center gap-6">
-            <span class="flex items-center gap-2"><i class="fas fa-phone-alt text-xs"></i> +880 1700-000000</span>
-            <span class="flex items-center gap-2"><i class="fas fa-envelope text-xs"></i> info@ren.org.bd</span>
+<!-- Top Header -->
+<header class="bg-white border-b sticky top-0 z-40">
+    <div class="flex items-center justify-between h-16 px-4">
+        <div class="flex items-center gap-4">
+            <button onclick="document.getElementById('sidebar').classList.toggle('-translate-x-full')" class="lg:hidden p-2">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold">REN</span>
+                </div>
+                <span class="font-bold hidden sm:block">Dashboard</span>
+            </a>
         </div>
         <div class="flex items-center gap-4">
-            <a href="#" class="hover:text-blue-200"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="hover:text-blue-200"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="hover:text-blue-200"><i class="fab fa-linkedin"></i></a>
-            <a href="forum.html" class="ml-2 font-medium text-yellow-300">Forum</a>
-        </div>
-    </div>
-</div>
-
-<!-- Main Navigation -->
-<nav class="bg-white border-b sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="flex justify-between items-center h-16">
-            <!-- Brand -->
-            <a href="index.html" class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <span class="text-white font-bold text-lg">REN</span>
-                </div>
-                <div class="hidden lg:block">
-                    <h1 class="text-lg font-bold text-gray-900">Rangpur Entrepreneurs Network</h1>
-                </div>
+            <a href="../../index.html" class="text-sm text-gray-500 hover:text-blue-600"><i class="fas fa-globe mr-1"></i> View Site</a>
+            <a href="#" class="p-2 text-gray-500 hover:text-blue-600 relative">
+                <i class="fas fa-bell"></i>
+                <span class="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
             </a>
-
-            <!-- Desktop Main Menu -->
-            <div class="hidden lg:flex items-center gap-1">
-                <a href="index.html" class="px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50">Home</a>
-                <a href="about.html" class="px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50">About</a>
-                
-                <!-- Membership Dropdown -->
-                <div class="relative group">
-                    <button class="px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50 flex items-center gap-1">
-                        Membership <i class="fas fa-chevron-down text-xs"></i>
-                    </button>
-                    <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border hidden group-hover:block z-50">
-                        <a href="membership.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 rounded-t-xl">
-                            <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center"><i class="fas fa-crown text-blue-600"></i></div>
-                            <div><p class="font-medium text-sm">Membership Plans</p><p class="text-xs text-gray-500">Choose your plan</p></div>
-                        </a>
-                        <a href="member-registration.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50">
-                            <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center"><i class="fas fa-user-plus text-green-600"></i></div>
-                            <div><p class="font-medium text-sm">Member Registration</p><p class="text-xs text-gray-500">Join now</p></div>
-                        </a>
-                        <a href="member-process.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50">
-                            <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center"><i class="fas fa-list-ol text-purple-600"></i></div>
-                            <div><p class="font-medium text-sm">Process of Membership</p><p class="text-xs text-gray-500">How to join</p></div>
-                        </a>
-                        <a href="member-benefits.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50">
-                            <div class="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center"><i class="fas fa-gift text-yellow-600"></i></div>
-                            <div><p class="font-medium text-sm">Benefits of Members</p><p class="text-xs text-gray-500">What you get</p></div>
-                        </a>
-                        <a href="member-rules.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50">
-                            <div class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center"><i class="fas fa-gavel text-red-600"></i></div>
-                            <div><p class="font-medium text-sm">Membership Rules</p><p class="text-xs text-gray-500">Guidelines</p></div>
-                        </a>
-                        <a href="member-services.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 rounded-b-xl">
-                            <div class="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center"><i class="fas fa-concierge-bell text-indigo-600"></i></div>
-                            <div><p class="font-medium text-sm">Member Services</p><p class="text-xs text-gray-500">What we offer</p></div>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Directory Dropdown -->
-                <div class="relative group">
-                    <button class="px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50 flex items-center gap-1">
-                        Directory <i class="fas fa-chevron-down text-xs"></i>
-                    </button>
-                    <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border hidden group-hover:block z-50">
-                        <a href="directory.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 rounded-t-xl">
-                            <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center"><i class="fas fa-users text-blue-600"></i></div>
-                            <div><p class="font-medium text-sm">Entrepreneurs</p><p class="text-xs text-gray-500">Browse all members</p></div>
-                        </a>
-                        <a href="marketplace.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 rounded-b-xl">
-                            <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center"><i class="fas fa-store text-green-600"></i></div>
-                            <div><p class="font-medium text-sm">Marketplace</p><p class="text-xs text-gray-500">Products & Services</p></div>
-                        </a>
-                    </div>
-                </div>
-
-                <a href="events.html" class="px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50">Events</a>
-                <a href="blog.html" class="px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50">Blog</a>
-            </div>
-
-            <!-- Right Actions -->
             <div class="flex items-center gap-2">
-                <a href="marketplace.html" class="p-2 text-gray-500 hover:text-blue-600 lg:hidden">
-                    <i class="fas fa-search"></i>
-                </a>
-                <a href="cart.html" class="p-2 text-gray-500 hover:text-blue-600 relative">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">0</span>
-                </a>
-                
-                <!-- Mobile Menu Button -->
-                <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="lg:hidden p-2 text-gray-600">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-                
-                <!-- Desktop Login -->
-                <a href="users/customer/index.html" class="hidden lg:flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-                    <i class="fas fa-sign-in-alt"></i><span>Login</span>
-                </a>
+                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                    <i class="fas fa-user text-blue-600 text-sm"></i>
+                </div>
+                <span class="hidden sm:block text-sm font-medium">Vendor</span>
             </div>
         </div>
     </div>
-</nav>
+</header>
 
-<!-- Mobile Menu -->
-<div id="mobile-menu" class="hidden lg:hidden bg-white border-b">
-    <div class="px-4 py-4 space-y-2">
-        <a href="index.html" class="block px-4 py-3 rounded-lg text-gray-600">Home</a>
-        <a href="about.html" class="block px-4 py-3 rounded-lg text-gray-600">About</a>
-        
-        <!-- Mobile Membership Accordion -->
-        <div class="border-t pt-2">
-            <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full flex justify-between items-center px-4 py-3 text-gray-600">
-                <span>Membership</span>
-                <i class="fas fa-chevron-down text-xs"></i>
-            </button>
-            <div class="hidden pl-4 space-y-1">
-                <a href="membership.html" class="block px-4 py-2 text-gray-500">- Membership Plans</a>
-                <a href="member-registration.html" class="block px-4 py-2 text-gray-500">- Member Registration</a>
-                <a href="member-process.html" class="block px-4 py-2 text-gray-500">- Process of Membership</a>
-                <a href="member-benefits.html" class="block px-4 py-2 text-gray-500">- Benefits of Members</a>
-                <a href="member-rules.html" class="block px-4 py-2 text-gray-500">- Membership Rules</a>
-                <a href="member-services.html" class="block px-4 py-2 text-gray-500">- Member Services</a>
-            </div>
+<div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="w-64 bg-white border-r min-h-screen fixed lg:relative z-30 -translate-x-full lg:translate-x-0 transition-transform">
+        <nav class="p-4 space-y-1">
+            <div class="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-2 mt-4">Main</div>
+            <a href="index.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-home w-5"></i> Dashboard</a>
+            <a href="orders.html" class="flex items-center gap-3 px-4 py-3 bg-blue-50 text-blue-600 rounded-lg font-medium"><i class="fas fa-shopping-bag w-5"></i> Orders</a>
+            <div class="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-2 mt-6">Quick Links</div>
+            <a href="../../vendor-store.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-eye w-5"></i> View Store</a>
+            <a href="index.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-sign-out-alt w-5"></i> Logout</a>
+        </nav>
+    </aside>
+
+    <!-- Overlay for mobile -->
+    <div id="sidebar-overlay" onclick="document.getElementById('sidebar').classList.add('-translate-x-full')" class="fixed inset-0 bg-black/50 z-20 hidden lg:hidden"></div>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6">
+        <h2 class="text-2xl font-bold mb-6">Orders Management</h2>
+        <div class="bg-white rounded-xl border shadow-sm overflow-hidden">
+            <table class="w-full">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Order</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Product</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Customer</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Amount</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y">
+                    <tr>
+                        <td class="px-6 py-4 text-sm">#REN-001</td>
+                        <td class="px-6 py-4 text-sm">Premium Website</td>
+                        <td class="px-6 py-4 text-sm">Ahmed Hasan</td>
+                        <td class="px-6 py-4 font-medium">?15,000</td>
+                        <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Completed</span></td>
+                        <td class="px-6 py-4"><button class="text-blue-600">View</button></td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 text-sm">#REN-002</td>
+                        <td class="px-6 py-4 text-sm">Mobile App</td>
+                        <td class="px-6 py-4 text-sm">Sarah Rahman</td>
+                        <td class="px-6 py-4 font-medium">?25,000</td>
+                        <td class="px-6 py-4"><span class="px-2 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full">Pending</span></td>
+                        <td class="px-6 py-4"><button class="text-green-600 mr-2">Accept</button><button class="text-red-600">Reject</button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        
-        <!-- Mobile Directory Accordion -->
-        <div class="border-t pt-2">
-            <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full flex justify-between items-center px-4 py-3 text-gray-600">
-                <span>Directory</span>
-                <i class="fas fa-chevron-down text-xs"></i>
-            </button>
-            <div class="hidden pl-4 space-y-1">
-                <a href="directory.html" class="block px-4 py-2 text-gray-500">- Entrepreneurs</a>
-                <a href="marketplace.html" class="block px-4 py-2 text-gray-500">- Marketplace</a>
-            </div>
-        </div>
-        
-        <a href="events.html" class="block px-4 py-3 rounded-lg text-gray-600">Events</a>
-        <a href="blog.html" class="block px-4 py-3 rounded-lg text-gray-600">Blog</a>
-        
-        <div class="border-t pt-2 space-y-2">
-            <a href="users/customer/index.html" class="block w-full text-center px-4 py-3 bg-blue-600 text-white rounded-lg">Login / Register</a>
-        </div>
-    </div>
+    </main>
 </div>
 
-<!-- Main Content -->
-
-        <div class="flex">
-            <aside class="w-64 bg-white border-r min-h-screen p-4 hidden lg:block">
-                <div class="space-y-1">
-                    <a href="index.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-home w-5"></i> Dashboard</a>
-                    <a href="orders.html" class="flex items-center gap-3 px-4 py-3 bg-blue-50 text-blue-600 rounded-lg font-medium"><i class="fas fa-shopping-bag w-5"></i> Orders</a>
-                    <a href="wallet.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-wallet w-5"></i> Wallet</a>
-                </div>
-            </aside>
-            <main class="flex-1 p-6">
-                <h2 class="text-2xl font-bold mb-6">Orders Management</h2>
-                <div class="bg-white rounded-xl border shadow-sm overflow-hidden">
-                    <table class="w-full">
-                        <thead class="bg-gray-50">
-                            <tr>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Order</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Product</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Customer</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Amount</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y">
-                            <tr>
-                                <td class="px-6 py-4 text-sm">#REN-001</td>
-                                <td class="px-6 py-4 text-sm">Premium Website</td>
-                                <td class="px-6 py-4 text-sm">Ahmed Hasan</td>
-                                <td class="px-6 py-4 font-medium">৳15,000</td>
-                                <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Completed</span></td>
-                                <td class="px-6 py-4"><button class="text-blue-600">View</button></td>
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 text-sm">#REN-002</td>
-                                <td class="px-6 py-4 text-sm">Mobile App</td>
-                                <td class="px-6 py-4 text-sm">Sarah Rahman</td>
-                                <td class="px-6 py-4 font-medium">৳25,000</td>
-                                <td class="px-6 py-4"><span class="px-2 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full">Pending</span></td>
-                                <td class="px-6 py-4"><button class="text-green-600 mr-2">Accept</button><button class="text-red-600">Reject</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </main>
-        </div>
-
-<footer class="bg-gray-900 text-white pt-16 pb-8">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
-            <!-- Brand -->
-            <div>
-                <div class="flex items-center gap-3 mb-4">
-                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                        <span class="font-bold">REN</span>
-                    </div>
-                    <div>
-                        <h3 class="font-bold">Rangpur Entrepreneurs Network</h3>
-                    </div>
-                </div>
-                <p class="text-gray-400 text-sm mb-4">Empowering entrepreneurs of Rangpur through digital innovation and community growth.</p>
-                <div class="flex gap-3">
-                    <a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-            
-            <!-- Quick Links -->
-            <div>
-                <h4 class="font-semibold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="about.html" class="hover:text-white">About Us</a></li>
-                    <li><a href="membership.html" class="hover:text-white">Membership</a></li>
-                    <li><a href="directory.html" class="hover:text-white">Directory</a></li>
-                    <li><a href="marketplace.html" class="hover:text-white">Marketplace</a></li>
-                    <li><a href="events.html" class="hover:text-white">Events</a></li>
-                </ul>
-            </div>
-            
-            <!-- Categories -->
-            <div>
-                <h4 class="font-semibold mb-4">Categories</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="marketplace.html" class="hover:text-white">Technology</a></li>
-                    <li><a href="marketplace.html" class="hover:text-white">Fashion</a></li>
-                    <li><a href="marketplace.html" class="hover:text-white">Food & Beverage</a></li>
-                    <li><a href="marketplace.html" class="hover:text-white">Agriculture</a></li>
-                    <li><a href="marketplace.html" class="hover:text-white">Services</a></li>
-                </ul>
-            </div>
-            
-            <!-- Legal Info -->
-            <div>
-                <h4 class="font-semibold mb-4">Legal Info</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="privacy.html" class="hover:text-white">Privacy Policy</a></li>
-                    <li><a href="terms.html" class="hover:text-white">Terms of Service</a></li>
-                    <li><a href="refund.html" class="hover:text-white">Refund Policy</a></li>
-                    <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
-                    <li><a href="contact.html" class="hover:text-white">Contact Us</a></li>
-                </ul>
-            </div>
-            
-            <!-- Contact -->
-            <div>
-                <h4 class="font-semibold mb-4">Contact</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt"></i> Rangpur, Bangladesh</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-phone"></i> +880 1700-000000</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-envelope"></i> info@ren.org.bd</li>
-                </ul>
-            </div>
-        </div>
-        
-        <!-- Bottom -->
-        <div class="border-t border-gray-800 pt-8 flex flex-wrap justify-between items-center text-sm text-gray-400">
-            <p>&copy; 2026 Rangpur Entrepreneurs Network. All rights reserved.</p>
-            <div class="flex gap-6">
-                <a href="privacy.html" class="hover:text-white">Privacy Policy</a>
-                <a href="terms.html" class="hover:text-white">Terms</a>
-                <a href="refund.html" class="hover:text-white">Refund Policy</a>
-                <a href="faq.html" class="hover:text-white">FAQ</a>
-                <a href="contact.html" class="hover:text-white">Contact</a>
-            </div>
-        </div>
-    </div>
+<footer class="border-t py-4 text-center text-sm text-gray-500">
+    &copy; 2026 Rangpur Entrepreneurs Network
 </footer>
 
 </body>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - REN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#0f172a',
+                        accent: '#8b5cf6',
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body class="bg-white text-slate-900 selection:bg-primary/10 selection:text-primary">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-4 py-4">
+        <div class="max-w-7xl mx-auto glass border border-white/20 rounded-2xl shadow-sm px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white shadow-lg">
+                    <i class="fa-solid fa-r text-xl font-black"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-secondary to-slate-600">REN</span>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-10">
+                <a href="index.html" class="text-sm font-bold text-slate-500 hover:text-primary transition">Home</a>
+                <a href="blog.html" class="text-sm font-bold text-primary flex items-center">
+                    <i class="fa-solid fa-chevron-left mr-2 text-[10px]"></i> Back to Insights
+                </a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="register.html" class="bg-secondary text-white px-6 py-3 rounded-xl text-sm font-bold hover:bg-slate-800 transition">Join Network</a>
+                <button class="lg:hidden text-slate-600"><i class="fa-solid fa-bars-staggered text-2xl"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="pt-40 pb-20 bg-slate-50/50">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center space-x-4 mb-8">
+                <span class="px-4 py-1.5 bg-blue-50 text-primary text-[10px] font-black uppercase tracking-[0.2em] rounded-full border border-blue-100">Business Tips</span>
+                <span class="text-slate-400 font-bold text-xs uppercase tracking-widest">May 01, 2026</span>
+            </div>
+            <h1 class="text-4xl lg:text-6xl font-black text-secondary leading-tight mb-10">5 Ways to Scale Your Local Handicraft Business</h1>
+            <div class="flex items-center justify-center space-x-4">
+                <img src="https://i.pravatar.cc/100?u=author1" class="w-12 h-12 rounded-2xl shadow-lg border-2 border-white" alt="">
+                <div class="text-left">
+                    <p class="text-sm font-black text-secondary">Md. Rahim</p>
+                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Founder, REN</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Image -->
+    <div class="max-w-6xl mx-auto px-6 -mt-10 mb-20">
+        <div class="aspect-video rounded-[3.5rem] overflow-hidden shadow-2xl border-8 border-white">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover" alt="Blog Featured Image">
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <main class="max-w-4xl mx-auto px-6 pb-32">
+        <div class="prose prose-slate prose-lg max-w-none">
+            <p class="text-xl text-slate-600 leading-relaxed mb-10 font-medium">Scaling a small business in the traditional handicraft sector requires a delicate balance between preserving authenticity and embracing modern digital tools. In the Rangpur division, we are seeing a resurgence of interest in local crafts, but many producers struggle to reach a wider audience.</p>
+            
+            <h2 class="text-3xl font-black text-secondary mt-16 mb-8">1. Embrace Digital Storytelling</h2>
+            <p class="text-slate-500 leading-loose mb-8">Your customers aren't just buying a product; they are buying a piece of Rangpur's heritage. Use high-quality photography and video to show the process behind your craft. Whether it's the rhythmic clicking of a loom or the careful painting of pottery, these stories build value and trust.</p>
+
+            <h2 class="text-3xl font-black text-secondary mt-16 mb-8">2. Leverage the REN Marketplace</h2>
+            <p class="text-slate-500 leading-loose mb-8">Instead of building your own e-commerce site from scratch, use the REN platform to list your items. We handle the technical infrastructure, search optimization, and community trust, allowing you to focus on what you do best: creating.</p>
+
+            <div class="my-16 p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100 flex items-start space-x-6 italic text-lg text-slate-600">
+                <i class="fa-solid fa-quote-left text-primary text-4xl opacity-20"></i>
+                <p>"The future of local business is hybrid. Offline quality meets online reach. This is the foundation upon which REN was built."</p>
+            </div>
+
+            <p class="text-slate-500 leading-loose mb-8">As we continue to grow the Rangpur Entrepreneurs Network, our mission remains clear: to provide the digital foundation for your success. We hope these tips help you take the next step in your business journey.</p>
+        </div>
+
+        <!-- Social Share -->
+        <div class="mt-20 pt-10 border-t border-slate-100 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Share this post:</span>
+                <div class="flex space-x-2">
+                    <button class="w-10 h-10 rounded-xl bg-slate-50 text-slate-400 hover:text-primary transition flex items-center justify-center"><i class="fa-brands fa-facebook-f"></i></button>
+                    <button class="w-10 h-10 rounded-xl bg-slate-50 text-slate-400 hover:text-primary transition flex items-center justify-center"><i class="fa-brands fa-twitter"></i></button>
+                    <button class="w-10 h-10 rounded-xl bg-slate-50 text-slate-400 hover:text-primary transition flex items-center justify-center"><i class="fa-brands fa-linkedin-in"></i></button>
+                </div>
+            </div>
+            <button class="flex items-center space-x-2 text-primary font-black text-xs uppercase tracking-widest hover:underline">
+                <i class="fa-solid fa-bookmark"></i>
+                <span>Save for later</span>
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-slate-400 py-24">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center space-x-3 mb-10">
+                <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+                    <i class="fa-solid fa-r text-sm font-black"></i>
+                </div>
+                <span class="text-xl font-bold text-white tracking-tighter">REN</span>
+            </div>
+            <p class="text-xs">&copy; 2026 Rangpur Entrepreneurs Network. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

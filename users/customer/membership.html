@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Membership - REN Dashboard</title>
+    <script src='https://cdn.tailwindcss.com'></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap' rel='stylesheet'>
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class='bg-gray-50'>
+<header class='bg-white border-b sticky top-0 z-40'>
+    <div class='flex items-center justify-between h-16 px-4'>
+        <div class='flex items-center gap-4'>
+            <button onclick='document.getElementById("sidebar").classList.toggle("-translate-x-full")' class='lg:hidden p-2'><i class='fas fa-bars'></i></button>
+            <a href='index.html' class='flex items-center gap-3'><div class='w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center'><span class='text-white font-bold'>REN</span></div><span class='font-bold hidden sm:block'>Dashboard</span></a>
+        </div>
+        <div class='flex items-center gap-4'>
+            <a href='../../index.html' class='text-sm text-gray-500 hover:text-blue-600'><i class='fas fa-globe mr-1'></i> View Site</a>
+            <a href='notifications.html' class='p-2 text-gray-500 hover:text-blue-600 relative'><i class='fas fa-bell'></i><span class='absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full'></span></a>
+            <div class='flex items-center gap-2'><div class='w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center'><i class='fas fa-user text-blue-600 text-sm'></i></div><span class='hidden sm:block text-sm font-medium'>Customer</span></div>
+        </div>
+    </div>
+</header>
+<div class='flex min-h-screen'>
+    <aside id='sidebar' class='w-64 bg-white border-r min-h-screen fixed lg:relative z-30 -translate-x-full lg:translate-x-0 transition-transform'>
+        <nav class='p-4 space-y-1'>
+            <div class='text-xs text-gray-400 font-semibold uppercase tracking-wider mb-2 mt-4'>Main</div>
+            <a href='index.html' class='flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg'><i class='fas fa-home w-5'></i> Dashboard</a>
+            <a href='orders.html' class='flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg'><i class='fas fa-shopping-bag w-5'></i> My Orders</a>
+            <a href='../../wishlist.html' class='flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg'><i class='fas fa-heart w-5'></i> Wishlist</a>
+            <a href='../../wallet.html' class='flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg'><i class='fas fa-wallet w-5'></i> Wallet</a>
+            <a href='addresses.html' class='flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg'><i class='fas fa-map-marker-alt w-5'></i> Addresses</a>
+            <a href='returns.html' class='flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg'><i class='fas fa-undo w-5'></i> Returns</a>
+            <div class='text-xs text-gray-400 font-semibold uppercase tracking-wider mb-2 mt-6'>Account</div>
+            <a href='reviews.html' class='flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg'><i class='fas fa-star w-5'></i> My Reviews</a>
+            <a href='membership.html' class='flex items-center gap-3 px-4 py-3 bg-blue-50 text-blue-600 rounded-lg'><i class='fas fa-crown w-5'></i> Membership</a>
+            <a href='notifications.html' class='flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg'><i class='fas fa-bell w-5'></i> Notifications</a>
+            <a href='support.html' class='flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg'><i class='fas fa-headset w-5'></i> Support</a>
+            <a href='profile.html' class='flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg'><i class='fas fa-user w-5'></i> Profile</a>
+            <a href='../../index.html' class='flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg'><i class='fas fa-sign-out-alt w-5'></i> Logout</a>
+        </nav>
+    </aside>
+    <div id='sidebar-overlay' onclick='document.getElementById("sidebar").classList.add("-translate-x-full")' class='fixed inset-0 bg-black/50 z-20 hidden lg:hidden'></div>
+    <main class='flex-1 p-6'>
+        <h1 class='text-2xl font-bold mb-6'>Membership</h1>
+        <div class='bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl p-8 text-white mb-6'>
+            <div class='flex items-center justify-between'>
+                <div>
+                    <p class='text-blue-100 mb-1'>Current Plan</p>
+                    <p class='text-3xl font-bold'>Gold Member</p>
+                    <p class='mt-2'>Valid until Dec 31, 2026</p>
+                </div>
+                <div class='text-right'>
+                    <div class='w-16 h-16 bg-white/20 rounded-full flex items-center justify-center'><i class='fas fa-crown text-2xl'></i></div>
+                </div>
+            </div>
+            <div class='grid grid-cols-3 gap-4 mt-6'>
+                <div class='text-center'>
+                    <p class='text-2xl font-bold'>15%</p>
+                    <p class='text-sm text-blue-100'>Discount</p>
+                </div>
+                <div class='text-center'>
+                    <p class='text-2xl font-bold'>Free</p>
+                    <p class='text-sm text-blue-100'>Shipping</p>
+                </div>
+                <div class='text-center'>
+                    <p class='text-2xl font-bold'>24/7</p>
+                    <p class='text-sm text-blue-100'>Support</p>
+                </div>
+            </div>
+        </div>
+        <h3 class='text-xl font-bold mb-4'>Available Plans</h3>
+        <div class='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            <div class='bg-white rounded-xl border p-6'>
+                <div class='text-center mb-4'>
+                    <div class='w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3'><i class='fas fa-user text-gray-600'></i></div>
+                    <h4 class='font-bold text-lg'>Basic</h4>
+                    <p class='text-3xl font-bold mt-2'>Free</p>
+                </div>
+                <ul class='space-y-2 mb-6'>
+                    <li class='flex items-center gap-2'><i class='fas fa-check text-green-600'></i> 2% discount on orders</li>
+                    <li class='flex items-center gap-2'><i class='fas fa-check text-green-600'></i> Standard support</li>
+                    <li class='flex items-center gap-2'><i class='fas fa-times text-gray-300'></i> Free shipping</li>
+                    <li class='flex items-center gap-2'><i class='fas fa-times text-gray-300'></i> Priority handling</li>
+                </ul>
+                <button class='w-full py-2 border rounded-lg hover:bg-gray-50'>Current Plan</button>
+            </div>
+            <div class='bg-white rounded-xl border-2 border-blue-600 p-6 relative'>
+                <div class='absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-3 py-1 text-xs rounded-full'>POPULAR</div>
+                <div class='text-center mb-4'>
+                    <div class='w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3'><i class='fas fa-crown text-blue-600'></i></div>
+                    <h4 class='font-bold text-lg'>Gold</h4>
+                    <p class='text-3xl font-bold mt-2'>$9.99<span class='text-sm font-normal'>/mo</span></p>
+                </div>
+                <ul class='space-y-2 mb-6'>
+                    <li class='flex items-center gap-2'><i class='fas fa-check text-green-600'></i> 15% discount on orders</li>
+                    <li class='flex items-center gap-2'><i class='fas fa-check text-green-600'></i> Free shipping over $50</li>
+                    <li class='flex items-center gap-2'><i class='fas fa-check text-green-600'></i> Priority support</li>
+                    <li class='flex items-center gap-2'><i class='fas fa-check text-green-600'></i> Early access to sales</li>
+                </ul>
+                <button class='w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700'>Current Plan</button>
+            </div>
+            <div class='bg-white rounded-xl border p-6'>
+                <div class='text-center mb-4'>
+                    <div class='w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3'><i class='fas fa-gem text-purple-600'></i></div>
+                    <h4 class='font-bold text-lg'>Platinum</h4>
+                    <p class='text-3xl font-bold mt-2'>$19.99<span class='text-sm font-normal'>/mo</span></p>
+                </div>
+                <ul class='space-y-2 mb-6'>
+                    <li class='flex items-center gap-2'><i class='fas fa-check text-green-600'></i> 25% discount on orders</li>
+                    <li class='flex items-center gap-2'><i class='fas fa-check text-green-600'></i> Free shipping all orders</li>
+                    <li class='flex items-center gap-2'><i class='fas fa-check text-green-600'></i> 24/7 VIP support</li>
+                    <li class='flex items-center gap-2'><i class='fas fa-check text-green-600'></i> Exclusive products</li>
+                </ul>
+                <button class='w-full py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50'>Upgrade</button>
+            </div>
+        </div>
+    </main>
+</div>
+<footer class='border-t py-4 text-center text-sm text-gray-500'>&copy; 2026 Rangpur Entrepreneurs Network</footer>
+</body>
+</html>

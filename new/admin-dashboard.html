@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - REN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#0f172a',
+                        accent: '#8b5cf6',
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-primary/10 selection:text-primary min-h-screen">
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-72 bg-secondary min-h-screen fixed left-0 top-0 text-slate-400 p-8 flex flex-col shadow-2xl z-40">
+            <div class="flex items-center space-x-3 mb-16 px-4">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/20">
+                    <i class="fa-solid fa-r text-xl font-black"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tighter text-white">REN Admin</span>
+            </div>
+
+            <nav class="space-y-3 flex-grow">
+                <a href="#" class="flex items-center space-x-4 px-6 py-4 rounded-2xl bg-primary text-white font-bold shadow-xl shadow-primary/20 transition-all">
+                    <i class="fa-solid fa-gauge-high text-sm"></i>
+                    <span>System Overview</span>
+                </a>
+                <a href="#" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-white/5 hover:text-white transition group font-bold">
+                    <i class="fa-solid fa-users text-sm group-hover:text-primary"></i>
+                    <span>Users</span>
+                </a>
+                <a href="#" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-white/5 hover:text-white transition group font-bold">
+                    <i class="fa-solid fa-shop text-sm group-hover:text-primary"></i>
+                    <span>Vendors</span>
+                </a>
+                <a href="#" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-white/5 hover:text-white transition group font-bold">
+                    <i class="fa-solid fa-cart-shopping text-sm group-hover:text-primary"></i>
+                    <span>Sales</span>
+                </a>
+                <a href="#" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-white/5 hover:text-white transition group font-bold">
+                    <i class="fa-solid fa-percent text-sm group-hover:text-primary"></i>
+                    <span>Commissions</span>
+                </a>
+                <a href="#" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-white/5 hover:text-white transition group font-bold">
+                    <i class="fa-solid fa-bullhorn text-sm group-hover:text-primary"></i>
+                    <span>Community</span>
+                </a>
+            </nav>
+
+            <div class="pt-8 border-t border-white/5">
+                <a href="index.html" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-red-500/10 hover:text-red-500 transition group font-bold">
+                    <i class="fa-solid fa-arrow-right-from-bracket text-sm group-hover:rotate-180 transition duration-500"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="ml-72 flex-grow">
+            <!-- Header -->
+            <header class="h-24 bg-white/80 backdrop-blur-md border-b border-slate-100 px-12 flex items-center justify-between sticky top-0 z-30">
+                <h2 class="text-xl font-black text-secondary tracking-tight">System Controls</h2>
+                <div class="flex items-center space-x-8">
+                    <div class="flex items-center space-x-3 px-4 py-2 bg-green-50 rounded-xl border border-green-100">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-ping"></span>
+                        <span class="text-[10px] font-black text-green-600 uppercase tracking-widest">Platform Live</span>
+                    </div>
+                    <div class="flex items-center space-x-4 border-l border-slate-100 pl-8 cursor-pointer group">
+                        <div class="text-right">
+                            <p class="text-xs font-black text-secondary group-hover:text-primary transition">Super Admin</p>
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Full Access</p>
+                        </div>
+                        <img src="https://i.pravatar.cc/100?u=admin" class="w-12 h-12 rounded-2xl border-2 border-slate-50 group-hover:border-primary/20 transition-all shadow-sm" alt="">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Body -->
+            <div class="p-12 pb-24">
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+                    <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3">Total Users</p>
+                        <h3 class="text-2xl font-black text-secondary tracking-tighter mb-4">1,240</h3>
+                        <p class="text-[10px] font-black text-green-500 uppercase tracking-widest">+12% growth</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3">Vendors</p>
+                        <h3 class="text-2xl font-black text-secondary tracking-tighter mb-4">85</h3>
+                        <p class="text-[10px] font-black text-blue-500 uppercase tracking-widest">12 Pending</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3">Total Volume</p>
+                        <h3 class="text-2xl font-black text-secondary tracking-tighter mb-4">৳2.4M</h3>
+                        <p class="text-[10px] font-black text-primary uppercase tracking-widest">৳320K Earned</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3">Events</p>
+                        <h3 class="text-2xl font-black text-secondary tracking-tighter mb-4">6</h3>
+                        <p class="text-[10px] font-black text-accent uppercase tracking-widest">180 RSVPs</p>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-10">
+                    <!-- Verification List -->
+                    <div class="bg-white rounded-[3.5rem] border border-slate-100 shadow-sm overflow-hidden hover:shadow-2xl transition duration-700">
+                        <div class="p-10 border-b border-slate-50 flex items-center justify-between">
+                            <h3 class="text-xl font-black text-secondary uppercase tracking-widest">Pending Verifications</h3>
+                            <span class="px-4 py-1.5 bg-red-50 text-red-500 text-[10px] font-black uppercase tracking-widest rounded-full border border-red-100">12 NEW</span>
+                        </div>
+                        <div class="p-8 space-y-6">
+                            <div class="flex items-center justify-between p-6 bg-slate-50/50 rounded-[2rem] hover:bg-white hover:shadow-xl transition duration-500 border border-transparent hover:border-slate-100">
+                                <div class="flex items-center space-x-5">
+                                    <div class="w-12 h-12 rounded-2xl overflow-hidden shadow-md">
+                                        <img src="https://i.pravatar.cc/100?u=v1" class="w-full h-full object-cover" alt="">
+                                    </div>
+                                    <div>
+                                        <h4 class="font-extrabold text-secondary">Zaman Handlooms</h4>
+                                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Category: Textiles</p>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-3">
+                                    <button class="w-10 h-10 rounded-xl bg-white text-green-500 shadow-sm hover:bg-green-500 hover:text-white transition"><i class="fa-solid fa-check"></i></button>
+                                    <button class="w-10 h-10 rounded-xl bg-white text-red-500 shadow-sm hover:bg-red-500 hover:text-white transition"><i class="fa-solid fa-xmark"></i></button>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between p-6 bg-slate-50/50 rounded-[2rem] hover:bg-white hover:shadow-xl transition duration-500 border border-transparent hover:border-slate-100">
+                                <div class="flex items-center space-x-5">
+                                    <div class="w-12 h-12 rounded-2xl overflow-hidden shadow-md">
+                                        <img src="https://i.pravatar.cc/100?u=v2" class="w-full h-full object-cover" alt="">
+                                    </div>
+                                    <div>
+                                        <h4 class="font-extrabold text-secondary">Organic Hub</h4>
+                                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Category: Agriculture</p>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-3">
+                                    <button class="w-10 h-10 rounded-xl bg-white text-green-500 shadow-sm hover:bg-green-500 hover:text-white transition"><i class="fa-solid fa-check"></i></button>
+                                    <button class="w-10 h-10 rounded-xl bg-white text-red-500 shadow-sm hover:bg-red-500 hover:text-white transition"><i class="fa-solid fa-xmark"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activity Logs -->
+                    <div class="bg-white rounded-[3.5rem] border border-slate-100 shadow-sm p-10 hover:shadow-2xl transition duration-700">
+                        <h3 class="text-xl font-black text-secondary uppercase tracking-widest mb-10">System Activity</h3>
+                        <div class="space-y-10">
+                            <div class="flex items-start space-x-6">
+                                <div class="w-10 h-10 rounded-2xl bg-blue-50 text-primary flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-plus text-xs"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold text-slate-600 leading-relaxed">New product <span class="text-secondary font-black">"Handwoven Sari"</span> added by <span class="text-primary font-black">Kamal Textiles</span>.</p>
+                                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-2">2 minutes ago</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-6">
+                                <div class="w-10 h-10 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-cart-shopping text-xs"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold text-slate-600 leading-relaxed">Order <span class="text-secondary font-black">#REN-8842</span> completed. Revenue distribution triggered.</p>
+                                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-2">15 minutes ago</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-6">
+                                <div class="w-10 h-10 rounded-2xl bg-violet-50 text-accent flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-user-plus text-xs"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold text-slate-600 leading-relaxed">New vendor application received from <span class="text-secondary font-black">Zaman Handlooms</span>.</p>
+                                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-2">1 hour ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

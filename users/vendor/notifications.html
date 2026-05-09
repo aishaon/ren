@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - REN Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-gray-50">
+<header class="bg-white border-b sticky top-0 z-40">
+    <div class="flex items-center justify-between h-16 px-4">
+        <div class="flex items-center gap-4">
+            <button onclick="document.getElementById('sidebar').classList.toggle('-translate-x-full')" class="lg:hidden p-2"><i class="fas fa-bars"></i></button>
+            <a href="index.html" class="flex items-center gap-3"><div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center"><span class="text-white font-bold">REN</span></div><span class="font-bold hidden sm:block">Dashboard</span></a>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="../../index.html" class="text-sm text-gray-500 hover:text-blue-600"><i class="fas fa-globe mr-1"></i> View Site</a>
+            <a href="notifications.html" class="p-2 text-gray-500 hover:text-blue-600 relative"><i class="fas fa-bell"></i><span class="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span></a>
+            <div class="flex items-center gap-2"><div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center"><i class="fas fa-user text-blue-600 text-sm"></i></div><span class="hidden sm:block text-sm font-medium">Vendor</span></div>
+        </div>
+    </div>
+</header>
+<div class="flex min-h-screen">
+    <aside id="sidebar" class="w-64 bg-white border-r min-h-screen fixed lg:relative z-30 -translate-x-full lg:translate-x-0 transition-transform">
+        <nav class="p-4 space-y-1">
+            <div class="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-2 mt-4">Main</div>
+            <a href="index.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-home w-5"></i> Dashboard</a>
+            <a href="orders.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-shopping-bag w-5"></i> Orders</a>
+            <a href="products.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-box w-5"></i> Products</a>
+            <a href="inventory.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-warehouse w-5"></i> Inventory</a>
+            <a href="analytics.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-chart-line w-5"></i> Analytics</a>
+            <a href="earnings.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-dollar-sign w-5"></i> Earnings</a>
+            <div class="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-2 mt-6">Store</div>
+            <a href="store-settings.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-store w-5"></i> Store Settings</a>
+            <a href="coupons.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-ticket-alt w-5"></i> Coupons</a>
+            <a href="shipping.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-truck w-5"></i> Shipping</a>
+            <a href="reviews.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-star w-5"></i> Reviews</a>
+            <div class="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-2 mt-6">Account</div>
+            <a href="notifications.html" class="flex items-center gap-3 px-4 py-3 bg-blue-50 text-blue-600 rounded-lg"><i class="fas fa-bell w-5"></i> Notifications</a>
+            <a href="withdraw.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-money-bill w-5"></i> Withdraw</a>
+            <a href="support.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-headset w-5"></i> Support</a>
+            <a href="index.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-sign-out-alt w-5"></i> Logout</a>
+        </nav>
+    </aside>
+    <div id="sidebar-overlay" onclick="document.getElementById('sidebar').classList.add('-translate-x-full')" class="fixed inset-0 bg-black/50 z-20 hidden lg:hidden"></div>
+    <main class="flex-1 p-6">
+        <div class="flex items-center justify-between mb-6">
+            <h1 class="text-2xl font-bold">Notifications</h1>
+            <button class="text-sm text-blue-600 hover:text-blue-800"><i class="fas fa-check-double mr-1"></i>Mark All Read</button>
+        </div>
+        <div class="space-y-3">
+            <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl flex items-start gap-4">
+                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-shopping-bag text-blue-600"></i></div>
+                <div class="flex-1">
+                    <p class="font-medium">New order received #1090</p>
+                    <p class="text-sm text-gray-600">Order total: $89.99 - 2 items</p>
+                    <p class="text-xs text-gray-400 mt-1">2 minutes ago</p>
+                </div>
+                <button class="text-blue-600 hover:text-blue-800 text-sm">View Order</button>
+            </div>
+            <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl flex items-start gap-4">
+                <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-dollar-sign text-green-600"></i></div>
+                <div class="flex-1">
+                    <p class="font-medium">Payment cleared for order #1085</p>
+                    <p class="text-sm text-gray-600">Amount: $34.99 is now available</p>
+                    <p class="text-xs text-gray-400 mt-1">5 hours ago</p>
+                </div>
+                <button class="text-blue-600 hover:text-blue-800 text-sm">View Details</button>
+            </div>
+            <div class="bg-white border p-4 rounded-xl flex items-start gap-4">
+                <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-star text-yellow-600"></i></div>
+                <div class="flex-1">
+                    <p class="font-medium">New review on Wireless Headphones</p>
+                    <p class="text-sm text-gray-600">John Smith rated 5 stars</p>
+                    <p class="text-xs text-gray-400 mt-1">1 day ago</p>
+                </div>
+                <button class="text-blue-600 hover:text-blue-800 text-sm">View Review</button>
+            </div>
+            <div class="bg-white border p-4 rounded-xl flex items-start gap-4">
+                <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-box text-purple-600"></i></div>
+                <div class="flex-1">
+                    <p class="font-medium">Low stock alert: Smart Watch Pro</p>
+                    <p class="text-sm text-gray-600">Only 12 units remaining in inventory</p>
+                    <p class="text-xs text-gray-400 mt-1">2 days ago</p>
+                </div>
+                <button class="text-blue-600 hover:text-blue-800 text-sm">Update Stock</button>
+            </div>
+            <div class="bg-white border p-4 rounded-xl flex items-start gap-4">
+                <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-ticket-alt text-orange-600"></i></div>
+                <div class="flex-1">
+                    <p class="font-medium">Coupon SAVE20 is expiring soon</p>
+                    <p class="text-sm text-gray-600">Expires on Apr 30, 2026</p>
+                    <p class="text-xs text-gray-400 mt-1">3 days ago</p>
+                </div>
+                <button class="text-blue-600 hover:text-blue-800 text-sm">View Coupon</button>
+            </div>
+            <div class="bg-white border p-4 rounded-xl flex items-start gap-4">
+                <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-exclamation-triangle text-red-600"></i></div>
+                <div class="flex-1">
+                    <p class="font-medium">Cotton T-Shirt is out of stock</p>
+                    <p class="text-sm text-gray-600">Please update inventory to resume sales</p>
+                    <p class="text-xs text-gray-400 mt-1">4 days ago</p>
+                </div>
+                <button class="text-blue-600 hover:text-blue-800 text-sm">Update Stock</button>
+            </div>
+        </div>
+    </main>
+</div>
+<footer class="border-t py-4 text-center text-sm text-gray-500">&copy; 2026 Rangpur Entrepreneurs Network</footer>
+</body>
+</html>

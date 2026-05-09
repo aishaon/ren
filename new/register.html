@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join REN - Empowering Entrepreneurs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#0f172a',
+                        accent: '#8b5cf6',
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .hero-pattern { background-image: radial-gradient(#e2e8f0 1px, transparent 1px); background-size: 32px 32px; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-primary/10 selection:text-primary min-h-screen flex flex-col">
+
+    <!-- Simple Navigation -->
+    <nav class="p-8">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white shadow-lg">
+                    <i class="fa-solid fa-r text-xl font-black"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tighter">REN</span>
+            </a>
+            <p class="text-sm font-bold text-slate-500 hidden sm:block">Already a member? <a href="login.html" class="text-primary hover:underline">Sign In</a></p>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow px-6 py-12 lg:py-20 hero-pattern">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-20 items-start">
+                
+                <!-- Info Column -->
+                <div class="hidden lg:block space-y-12 pt-10">
+                    <div>
+                        <h1 class="text-5xl font-black text-secondary leading-tight mb-8">Join the largest <br> <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">network</span> in Rangpur.</h1>
+                        <p class="text-xl text-slate-500 leading-relaxed">Scale your business, connect with verified partners, and reach thousands of local customers through our hybrid marketplace.</p>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="flex items-center space-x-6">
+                            <div class="w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center text-primary text-2xl">
+                                <i class="fa-solid fa-rocket"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-secondary">Instant Storefront</h4>
+                                <p class="text-sm text-slate-500 font-medium">List products in minutes and start selling.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-6">
+                            <div class="w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center text-primary text-2xl">
+                                <i class="fa-solid fa-users-rays"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-secondary">Expert Community</h4>
+                                <p class="text-sm text-slate-500 font-medium">Get advice from established business leaders.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-6">
+                            <div class="w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center text-primary text-2xl">
+                                <i class="fa-solid fa-shield-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-secondary">Verified Trust</h4>
+                                <p class="text-sm text-slate-500 font-medium">Build confidence with a REN verified badge.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-10 bg-secondary rounded-[3rem] text-white shadow-2xl relative overflow-hidden">
+                        <!-- Background decoration -->
+                        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+                        <p class="text-lg italic opacity-80 mb-8 relative z-10">"REN provided the digital storefront I needed to take my family business to the next level."</p>
+                        <div class="flex items-center space-x-4 relative z-10">
+                            <img src="https://i.pravatar.cc/100?u=sarah" class="w-10 h-10 rounded-full border border-white/20" alt="">
+                            <div>
+                                <p class="font-bold text-sm">Sarah Begum</p>
+                                <p class="text-[10px] font-bold uppercase tracking-widest text-primary">Green Agro Solution</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="bg-white rounded-[3.5rem] shadow-2xl shadow-blue-100 p-10 lg:p-16 border border-slate-100">
+                    <form class="space-y-8">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-2">Full Name</label>
+                                <input type="text" required class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-primary/30 outline-none transition-all font-medium" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-2">Phone</label>
+                                <input type="tel" required class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-primary/30 outline-none transition-all font-medium" placeholder="+880">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-2">Email Address</label>
+                            <input type="email" required class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-primary/30 outline-none transition-all font-medium" placeholder="name@company.com">
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-2">Business Category</label>
+                            <select class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-primary/30 outline-none transition-all font-medium appearance-none cursor-pointer">
+                                <option>Select your industry</option>
+                                <option>Textiles & Garments</option>
+                                <option>Agriculture & Farming</option>
+                                <option>Food & Processing</option>
+                                <option>IT & Tech Services</option>
+                                <option>Handicrafts</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4 ml-2">Select Plan</label>
+                            <div class="grid grid-cols-3 gap-4">
+                                <label class="cursor-pointer group">
+                                    <input type="radio" name="plan" class="peer sr-only" checked>
+                                    <div class="p-4 rounded-2xl border-2 border-slate-50 bg-slate-50 text-center peer-checked:border-primary peer-checked:bg-blue-50/50 transition-all">
+                                        <p class="text-[8px] font-black uppercase tracking-widest text-slate-400 mb-1">Basic</p>
+                                        <p class="text-sm font-black text-secondary">Free</p>
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer group">
+                                    <input type="radio" name="plan" class="peer sr-only">
+                                    <div class="p-4 rounded-2xl border-2 border-slate-50 bg-slate-50 text-center peer-checked:border-primary peer-checked:bg-blue-50/50 transition-all">
+                                        <p class="text-[8px] font-black uppercase tracking-widest text-slate-400 mb-1">Premium</p>
+                                        <p class="text-sm font-black text-secondary">৳1.5K</p>
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer group">
+                                    <input type="radio" name="plan" class="peer sr-only">
+                                    <div class="p-4 rounded-2xl border-2 border-slate-50 bg-slate-50 text-center peer-checked:border-primary peer-checked:bg-blue-50/50 transition-all">
+                                        <p class="text-[8px] font-black uppercase tracking-widest text-slate-400 mb-1">Elite</p>
+                                        <p class="text-sm font-black text-secondary">৳3.5K</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-2">Password</label>
+                            <input type="password" required class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-primary/30 outline-none transition-all font-medium" placeholder="••••••••">
+                        </div>
+
+                        <div class="flex items-start ml-2">
+                            <input type="checkbox" required id="terms" class="mt-1 w-4 h-4 rounded border-slate-200 text-primary focus:ring-primary/20 cursor-pointer">
+                            <label for="terms" class="ml-3 text-[10px] font-bold text-slate-400 leading-relaxed uppercase tracking-widest">
+                                I agree to the <a href="#" class="text-primary hover:underline">Terms of Service</a> and <a href="#" class="text-primary hover:underline">Privacy Policy</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="w-full py-5 bg-primary text-white rounded-2xl font-black text-lg hover:bg-blue-700 transition shadow-xl shadow-primary/30">
+                            Create My Account
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="p-12 text-center">
+        <p class="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em]">&copy; 2026 Rangpur Entrepreneurs Network</p>
+    </footer>
+
+</body>
+</html>

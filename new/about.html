@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - REN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#0f172a',
+                        accent: '#8b5cf6',
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); }
+        .hero-pattern { background-image: radial-gradient(#e2e8f0 1px, transparent 1px); background-size: 32px 32px; }
+    </style>
+</head>
+<body class="bg-white text-slate-900 selection:bg-primary/10 selection:text-primary">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-4 py-4">
+        <div class="max-w-7xl mx-auto glass border border-white/20 rounded-2xl shadow-sm px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/20">
+                    <i class="fa-solid fa-r text-xl font-black"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-secondary to-slate-600">REN</span>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-10">
+                <a href="index.html" class="text-sm font-bold text-slate-500 hover:text-primary transition">Home</a>
+                <a href="about.html" class="text-sm font-bold text-primary">About</a>
+                <a href="membership.html" class="text-sm font-bold text-slate-500 hover:text-primary transition">Membership</a>
+                <a href="directory.html" class="text-sm font-bold text-slate-500 hover:text-primary transition">Entrepreneurs</a>
+                <a href="shop.html" class="text-sm font-bold text-slate-500 hover:text-primary transition">Marketplace</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="login.html" class="hidden sm:block text-sm font-bold text-slate-600 hover:text-primary transition">Login</a>
+                <a href="register.html" class="bg-secondary text-white px-6 py-3 rounded-xl text-sm font-bold hover:bg-slate-800 transition shadow-xl shadow-slate-200">Join Network</a>
+                <button class="lg:hidden text-slate-600"><i class="fa-solid fa-bars-staggered text-2xl"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="relative pt-40 pb-20 lg:pt-56 lg:pb-32 overflow-hidden hero-pattern">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight text-secondary leading-tight mb-8">
+                Building the Future of <br>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Rangpur's Business.</span>
+            </h1>
+            <p class="text-xl text-slate-500 leading-relaxed max-w-2xl mx-auto">
+                We are more than just a network. We are a digital ecosystem dedicated to empowering local entrepreneurs and fostering sustainable growth.
+            </p>
+        </div>
+    </header>
+
+    <!-- Content Sections -->
+    <main class="space-y-32 pb-32">
+        
+        <!-- Story Section -->
+        <section class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" class="rounded-[3rem] shadow-2xl" alt="Our Story">
+                    <div class="absolute -bottom-10 -right-10 bg-primary p-10 rounded-[2.5rem] shadow-2xl text-white hidden lg:block">
+                        <p class="text-4xl font-black mb-1">2018</p>
+                        <p class="text-xs font-bold uppercase tracking-widest opacity-60">Year Founded</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-sm font-black text-primary uppercase tracking-[0.2em] mb-4">Our Journey</h2>
+                    <h3 class="text-4xl font-extrabold text-secondary mb-8 leading-tight">Empowering traditional businesses with modern tools.</h3>
+                    <p class="text-lg text-slate-500 leading-relaxed mb-8">
+                        The Rangpur Entrepreneurs Network (REN) was born out of a simple need: to bridge the gap between talented local producers and the growing digital economy. 
+                    </p>
+                    <p class="text-lg text-slate-500 leading-relaxed">
+                        Today, we serve as a central hub for hundreds of entrepreneurs, providing them with the visibility, tools, and community support they need to thrive in a competitive market.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Grid -->
+        <section class="bg-slate-50 py-32">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-20">
+                    <h2 class="text-sm font-black text-primary uppercase tracking-[0.2em] mb-4">Our Core Values</h2>
+                    <h3 class="text-4xl font-extrabold text-secondary">The principles that drive us.</h3>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                        <div class="w-16 h-16 bg-blue-50 text-primary rounded-2xl flex items-center justify-center text-3xl mb-8">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Community First</h4>
+                        <p class="text-slate-500 leading-relaxed">We believe in collaboration over competition. When one of us grows, we all grow.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                        <div class="w-16 h-16 bg-violet-50 text-accent rounded-2xl flex items-center justify-center text-3xl mb-8">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Innovation</h4>
+                        <p class="text-slate-500 leading-relaxed">Constant improvement of our platform to provide the best user experience for entrepreneurs.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                        <div class="w-16 h-16 bg-slate-100 text-secondary rounded-2xl flex items-center justify-center text-3xl mb-8">
+                            <i class="fa-solid fa-shield-check"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Trust & Integrity</h4>
+                        <p class="text-slate-500 leading-relaxed">Maintaining a verified network of business leaders to ensure quality and reliability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-sm font-black text-primary uppercase tracking-[0.2em] mb-4">The Team</h2>
+                <h3 class="text-4xl font-extrabold text-secondary">The people behind the mission.</h3>
+            </div>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group text-center">
+                    <div class="relative mb-6 overflow-hidden rounded-[2.5rem] aspect-square shadow-xl">
+                        <img src="https://i.pravatar.cc/400?u=team1" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 group-hover:scale-110" alt="Team Member">
+                    </div>
+                    <h4 class="text-xl font-bold text-secondary">Md. Abdur Rahim</h4>
+                    <p class="text-sm font-bold text-primary uppercase tracking-widest mt-1">Founder & President</p>
+                </div>
+                <div class="group text-center">
+                    <div class="relative mb-6 overflow-hidden rounded-[2.5rem] aspect-square shadow-xl">
+                        <img src="https://i.pravatar.cc/400?u=team2" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 group-hover:scale-110" alt="Team Member">
+                    </div>
+                    <h4 class="text-xl font-bold text-secondary">Farzana Yeasmin</h4>
+                    <p class="text-sm font-bold text-primary uppercase tracking-widest mt-1">Operations Manager</p>
+                </div>
+                <div class="group text-center">
+                    <div class="relative mb-6 overflow-hidden rounded-[2.5rem] aspect-square shadow-xl">
+                        <img src="https://i.pravatar.cc/400?u=team3" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 group-hover:scale-110" alt="Team Member">
+                    </div>
+                    <h4 class="text-xl font-bold text-secondary">Tanvir Hossain</h4>
+                    <p class="text-sm font-bold text-primary uppercase tracking-widest mt-1">Head of Community</p>
+                </div>
+                <div class="group text-center">
+                    <div class="relative mb-6 overflow-hidden rounded-[2.5rem] aspect-square shadow-xl">
+                        <img src="https://i.pravatar.cc/400?u=team4" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 group-hover:scale-110" alt="Team Member">
+                    </div>
+                    <h4 class="text-xl font-bold text-secondary">Nusrat Jahan</h4>
+                    <p class="text-sm font-bold text-primary uppercase tracking-widest mt-1">Event Coordinator</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-slate-400 py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center space-x-3 mb-8">
+                        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+                            <i class="fa-solid fa-r text-sm font-black"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white tracking-tighter">REN</span>
+                    </div>
+                    <p class="text-sm leading-loose mb-8">Rangpur Entrepreneurs Network is the digital foundation for the North Bengal business ecosystem.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-8">Platform</h4>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="shop.html" class="hover:text-primary transition">Marketplace</a></li>
+                        <li><a href="directory.html" class="hover:text-primary transition">Member Directory</a></li>
+                        <li><a href="events.html" class="hover:text-primary transition">Community Events</a></li>
+                        <li><a href="blog.html" class="hover:text-primary transition">Insights & Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-8">Company</h4>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="about.html" class="hover:text-primary transition">Our Story</a></li>
+                        <li><a href="membership.html" class="hover:text-primary transition">Pricing Plans</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition">Contact Us</a></li>
+                        <li><a href="faq.html" class="hover:text-primary transition">Help Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-8">Stay Updated</h4>
+                    <p class="text-xs mb-6">Join our newsletter for the latest local business news.</p>
+                    <div class="flex">
+                        <input type="text" placeholder="Email" class="w-full bg-white/5 border border-white/10 rounded-l-xl px-4 py-3 text-xs outline-none focus:border-primary transition">
+                        <button class="bg-primary text-white px-4 rounded-r-xl hover:bg-blue-700 transition">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-white/5 text-center flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs">&copy; 2026 Rangpur Entrepreneurs Network. All rights reserved.</p>
+                <div class="flex space-x-8 text-xs font-bold uppercase tracking-widest">
+                    <a href="privacy.html" class="hover:text-white transition">Privacy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms</a>
+                    <a href="cookies.html" class="hover:text-white transition">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

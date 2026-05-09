@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Product - Vendor Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#0f172a',
+                        accent: '#8b5cf6',
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-primary/10 selection:text-primary min-h-screen">
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-72 bg-secondary min-h-screen fixed left-0 top-0 text-slate-400 p-8 flex flex-col shadow-2xl z-40">
+            <div class="flex items-center space-x-3 mb-16 px-4">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white shadow-lg">
+                    <i class="fa-solid fa-r text-xl font-black"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tighter text-white">REN</span>
+            </div>
+
+            <nav class="space-y-3 flex-grow">
+                <a href="vendor-dashboard.html" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-white/5 hover:text-white transition group font-bold">
+                    <i class="fa-solid fa-chart-pie text-sm group-hover:text-primary"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="flex items-center space-x-4 px-6 py-4 rounded-2xl bg-primary text-white font-bold shadow-xl shadow-primary/20 transition-all">
+                    <i class="fa-solid fa-layer-group text-sm"></i>
+                    <span>Products</span>
+                </a>
+                <a href="#" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-white/5 hover:text-white transition group font-bold">
+                    <i class="fa-solid fa-truck-fast text-sm group-hover:text-primary"></i>
+                    <span>Orders</span>
+                </a>
+                <a href="withdraw.html" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-white/5 hover:text-white transition group font-bold">
+                    <i class="fa-solid fa-money-bill-transfer text-sm group-hover:text-primary"></i>
+                    <span>Earnings</span>
+                </a>
+            </nav>
+
+            <div class="pt-8 border-t border-white/5 text-center">
+                <a href="vendor-dashboard.html" class="text-xs font-bold text-slate-500 hover:text-white transition">Cancel & Exit</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="ml-72 flex-grow">
+            <!-- Header -->
+            <header class="h-24 bg-white/80 backdrop-blur-md border-b border-slate-100 px-12 flex items-center justify-between sticky top-0 z-30">
+                <div class="flex items-center space-x-4">
+                    <a href="vendor-dashboard.html" class="w-10 h-10 rounded-xl bg-slate-50 text-slate-400 flex items-center justify-center hover:bg-primary hover:text-white transition shadow-sm">
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </a>
+                    <h2 class="text-xl font-black text-secondary tracking-tight">Add New Product</h2>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Saving Draft...</span>
+                    <button class="bg-primary text-white px-8 py-3 rounded-xl text-sm font-black uppercase tracking-widest hover:bg-blue-700 transition shadow-xl shadow-primary/20">Publish Item</button>
+                </div>
+            </header>
+
+            <!-- Body -->
+            <div class="p-12 pb-24">
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid lg:grid-cols-3 gap-12">
+                        
+                        <!-- Left: Form -->
+                        <div class="lg:col-span-2 space-y-8">
+                            <!-- Basic Info -->
+                            <div class="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-sm space-y-8">
+                                <h3 class="text-lg font-black text-secondary uppercase tracking-widest mb-6 pb-4 border-b border-slate-50">General Information</h3>
+                                <div>
+                                    <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-2">Product Name</label>
+                                    <input type="text" class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-primary/30 outline-none transition-all font-medium" placeholder="e.g. Premium Silk Scarf">
+                                </div>
+                                <div class="grid grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-2">Category</label>
+                                        <select class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-primary/30 outline-none transition-all font-medium appearance-none cursor-pointer">
+                                            <option>Textiles</option>
+                                            <option>Agriculture</option>
+                                            <option>Handicrafts</option>
+                                            <option>Food & Bev</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-2">Stock Unit</label>
+                                        <input type="text" class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-primary/30 outline-none transition-all font-medium" placeholder="pcs, kg, etc.">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-2">Description</label>
+                                    <textarea rows="6" class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-primary/30 outline-none transition-all font-medium" placeholder="Describe your product in detail..."></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Pricing -->
+                            <div class="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-sm space-y-8">
+                                <h3 class="text-lg font-black text-secondary uppercase tracking-widest mb-6 pb-4 border-b border-slate-50">Pricing & Inventory</h3>
+                                <div class="grid grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-2">Base Price (৳)</label>
+                                        <input type="number" class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-primary/30 outline-none transition-all font-medium text-lg font-black" placeholder="0.00">
+                                    </div>
+                                    <div>
+                                        <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-2">Sale Price (৳)</label>
+                                        <input type="number" class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-primary/30 outline-none transition-all font-medium text-lg font-black text-primary" placeholder="0.00">
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-2">Quantity in Stock</label>
+                                        <input type="number" class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-primary/30 outline-none transition-all font-medium" placeholder="0">
+                                    </div>
+                                    <div>
+                                        <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-2">SKU Code</label>
+                                        <input type="text" class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-primary/30 outline-none transition-all font-medium" placeholder="ABC-123">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Media -->
+                        <div class="space-y-8">
+                            <div class="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-sm">
+                                <h3 class="text-lg font-black text-secondary uppercase tracking-widest mb-8">Media</h3>
+                                <div class="space-y-6">
+                                    <div class="aspect-square rounded-[2rem] border-2 border-dashed border-slate-200 bg-slate-50 flex flex-col items-center justify-center text-center p-8 hover:bg-blue-50/50 hover:border-primary/30 transition-all cursor-pointer group">
+                                        <div class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition">
+                                            <i class="fa-solid fa-cloud-arrow-up text-2xl"></i>
+                                        </div>
+                                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Main Product Image</p>
+                                        <p class="text-[8px] font-bold text-slate-300 mt-2">PNG, JPG up to 10MB</p>
+                                    </div>
+                                    <div class="grid grid-cols-3 gap-4">
+                                        <div class="aspect-square rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-300 hover:text-primary hover:bg-blue-50 transition cursor-pointer">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                        <div class="aspect-square rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-300 hover:text-primary hover:bg-blue-50 transition cursor-pointer">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                        <div class="aspect-square rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-300 hover:text-primary hover:bg-blue-50 transition cursor-pointer">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-secondary rounded-[3rem] p-10 text-white shadow-2xl">
+                                <h4 class="font-black text-sm uppercase tracking-widest mb-6">Pro Tip</h4>
+                                <p class="text-sm text-slate-400 leading-relaxed italic">"Products with high-quality, bright photos receive up to 80% more orders. Use natural light for your crafts!"</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

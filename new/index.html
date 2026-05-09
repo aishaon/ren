@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REN — The Vanguard of North Bengal Entrepreneurship</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a1c2e', // Deep Midnight
+                        accent: '#4f46e5',  // Vibrant Indigo
+                        gold: '#b45309',    // Refined Gold
+                        surface: '#ffffff',
+                    },
+                    fontFamily: {
+                        serif: ['Fraunces', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        syne: ['Syne', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        'ultra-widest': '0.3em',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,900;1,9..144,300&family=Inter:wght@400;700&family=Syne:wght@400;700;800&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .font-serif { font-family: 'Fraunces', serif; }
+        .font-syne { font-family: 'Syne', sans-serif; }
+
+        .line-growth { 
+            position: relative; 
+        }
+        .line-growth::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: currentColor;
+            transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .line-growth:hover::after { width: 100%; }
+
+        .image-reveal {
+            clip-path: inset(0 0 100% 0);
+            animation: imageReveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+        }
+        @keyframes imageReveal {
+            to { clip-path: inset(0 0 0 0); }
+        }
+
+        .border-elegant { border: 1px solid rgba(26, 28, 46, 0.08); }
+    </style>
+</head>
+<body class="bg-white text-primary antialiased">
+
+    <!-- Header / Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-[100] bg-white/80 backdrop-blur-xl border-b border-elegant">
+        <div class="max-w-[1600px] mx-auto px-10 h-24 flex items-center justify-between">
+            <div class="flex items-center space-x-12">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white transition-transform group-hover:rotate-90 duration-500">
+                        <span class="text-xs font-black">R</span>
+                    </div>
+                    <span class="font-syne font-extrabold text-2xl tracking-tighter uppercase">Network.</span>
+                </a>
+                
+                <div class="hidden xl:flex items-center space-x-10 text-[10px] font-bold uppercase tracking-widest opacity-40">
+                    <a href="shop.html" class="hover:opacity-100 transition">Marketplace</a>
+                    <a href="directory.html" class="hover:opacity-100 transition">Directory</a>
+                    <a href="events.html" class="hover:opacity-100 transition">Calendar</a>
+                    <a href="impact-report.html" class="hover:opacity-100 transition">Intelligence</a>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-8">
+                <a href="login.html" class="text-[10px] font-bold uppercase tracking-widest line-growth">Access Portal</a>
+                <a href="register.html" class="px-8 py-3 bg-primary text-white text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-accent transition-colors shadow-2xl">
+                    Join the Collective
+                </a>
+                <button class="text-primary"><i class="fa-solid fa-bars-staggered text-xl"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section: Editorial Elegance -->
+    <section class="pt-24 min-h-screen flex flex-col justify-center relative overflow-hidden">
+        <!-- Background Text -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-[0.02] select-none">
+            <h1 class="font-syne text-[30vw] font-black leading-none uppercase text-center">North Bengal</h1>
+        </div>
+
+        <div class="max-w-[1600px] mx-auto px-10 w-full relative z-10">
+            <div class="grid lg:grid-cols-12 gap-20 items-end">
+                <div class="lg:col-span-8">
+                    <p class="text-[10px] font-bold uppercase tracking-[0.4em] mb-12 flex items-center">
+                        <span class="w-12 h-[1px] bg-primary mr-6"></span> Established 2026 / Rangpur Division
+                    </p>
+                    <h1 class="font-serif text-[clamp(3rem,10vw,8rem)] leading-[0.85] font-light italic tracking-tighter mb-16">
+                        Cultivating <br>
+                        <span class="font-semibold not-italic">Exceptional</span> <br>
+                        Entrepreneurs.
+                    </h1>
+                    <div class="flex flex-col sm:flex-row items-center gap-10">
+                        <a href="register.html" class="w-full sm:w-auto px-12 py-6 bg-primary text-white text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-accent transition shadow-2xl">
+                            Begin your application
+                        </a>
+                        <p class="text-sm font-medium text-slate-400 italic max-w-xs text-center sm:text-left">
+                            "A curated ecosystem where traditional crafts meet high-performance digital commerce."
+                        </p>
+                    </div>
+                </div>
+                <div class="lg:col-span-4 hidden lg:block">
+                    <div class="relative image-reveal">
+                        <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" class="w-full aspect-[3/4] object-cover grayscale brightness-95" alt="Editorial Visual">
+                        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-white border border-elegant p-8 flex flex-col justify-center">
+                            <p class="text-[8px] font-bold text-slate-400 uppercase tracking-widest mb-2">Members</p>
+                            <p class="text-3xl font-syne font-black">500+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manifesto: Pure Minimalism -->
+    <section class="py-60 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-10">
+            <div class="max-w-4xl">
+                <h2 class="text-[10px] font-bold uppercase tracking-[0.6em] mb-16 opacity-40">The Manifesto</h2>
+                <h3 class="font-serif text-5xl lg:text-7xl font-light leading-[1.2] mb-20 italic">
+                    "We don't just facilitate trade; we engineer the <span class="text-white opacity-100 font-semibold not-italic">cultural and economic evolution</span> of our region."
+                </h3>
+                <div class="grid md:grid-cols-2 gap-20">
+                    <p class="text-lg font-light leading-relaxed opacity-60">
+                        The Rangpur Entrepreneurs Network was founded as a response to the fragmentation of local talent. By creating a singular, elite digital infrastructure, we allow the finest artisans and innovators to compete on a global standard while maintaining their regional soul.
+                    </p>
+                    <p class="text-lg font-light leading-relaxed opacity-60">
+                        Our platform is built on three pillars: absolute verification, radical transparency, and collaborative intelligence. We invite you to contribute to this legacy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Categories: High Fashion Grid -->
+    <section class="py-60 bg-white">
+        <div class="max-w-[1600px] mx-auto px-10">
+            <div class="flex items-center justify-between mb-32">
+                <h2 class="font-syne text-4xl font-black uppercase tracking-tighter">The Ecosystem.</h2>
+                <a href="about.html" class="text-[10px] font-bold uppercase tracking-widest border-b border-primary pb-2 hover:text-accent hover:border-accent transition">Our Story</a>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-[1px] bg-slate-100 border-elegant">
+                <!-- Pillar 1 -->
+                <div class="bg-white p-20 flex flex-col justify-between aspect-square group hover:bg-primary transition-colors duration-700">
+                    <p class="text-[10px] font-black uppercase tracking-widest text-slate-300 group-hover:text-white/40 transition">01</p>
+                    <div>
+                        <h4 class="font-serif text-4xl font-semibold italic mb-8 group-hover:text-white transition">The Exchange</h4>
+                        <p class="text-sm font-medium text-slate-400 group-hover:text-white/60 transition leading-loose mb-10">A high-performance marketplace where North Bengal's premium goods are showcased and traded securely.</p>
+                        <a href="shop.html" class="inline-block text-[10px] font-black uppercase tracking-widest text-primary group-hover:text-white border border-primary group-hover:border-white px-8 py-4 rounded-full transition-all">Explore Commerce</a>
+                    </div>
+                </div>
+                <!-- Pillar 2 -->
+                <div class="bg-white p-20 flex flex-col justify-between aspect-square group hover:bg-primary transition-colors duration-700">
+                    <p class="text-[10px] font-black uppercase tracking-widest text-slate-300 group-hover:text-white/40 transition">02</p>
+                    <div>
+                        <h4 class="font-serif text-4xl font-semibold italic mb-8 group-hover:text-white transition">The Archive</h4>
+                        <p class="text-sm font-medium text-slate-400 group-hover:text-white/60 transition leading-loose mb-10">A verified directory of regional leaders, artisans, and innovators creating a web of trust.</p>
+                        <a href="directory.html" class="inline-block text-[10px] font-black uppercase tracking-widest text-primary group-hover:text-white border border-primary group-hover:border-white px-8 py-4 rounded-full transition-all">Member Directory</a>
+                    </div>
+                </div>
+                <!-- Pillar 3 -->
+                <div class="bg-white p-20 flex flex-col justify-between aspect-square group hover:bg-primary transition-colors duration-700">
+                    <p class="text-[10px] font-black uppercase tracking-widest text-slate-300 group-hover:text-white/40 transition">03</p>
+                    <div>
+                        <h4 class="font-serif text-4xl font-semibold italic mb-8 group-hover:text-white transition">The Intelligence</h4>
+                        <p class="text-sm font-medium text-slate-400 group-hover:text-white/60 transition leading-loose mb-10">Exclusive reports, economic insights, and masterclasses to elevate your strategic thinking.</p>
+                        <a href="impact-report.html" class="inline-block text-[10px] font-black uppercase tracking-widest text-primary group-hover:text-white border border-primary group-hover:border-white px-8 py-4 rounded-full transition-all">Market Reports</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curated Product Spotlight -->
+    <section class="py-60 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-[1600px] mx-auto px-10">
+            <div class="grid lg:grid-cols-2 gap-40 items-center">
+                <div class="relative">
+                    <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1590736962234-45520970677a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover" alt="Product">
+                    </div>
+                    <div class="absolute -top-10 -right-10 bg-primary text-white p-12 rounded-full font-serif text-2xl italic">Curated</div>
+                </div>
+                <div>
+                    <h2 class="text-[10px] font-black uppercase tracking-[0.4em] mb-10 text-slate-400">Featured Artifact</h2>
+                    <h3 class="font-serif text-6xl font-light leading-tight italic mb-12">Handwoven Silk, <br> <span class="not-italic font-semibold text-primary">Redefined.</span></h3>
+                    <p class="text-xl text-slate-500 leading-relaxed mb-16 font-light">Experience the absolute peak of Rangpur weaving. This collection represents the fusion of centuries-old technique with contemporary aesthetic standards.</p>
+                    <a href="shop.html" class="text-xs font-black uppercase tracking-[0.2em] px-10 py-5 bg-white border border-elegant rounded-full hover:bg-primary hover:text-white transition shadow-xl">Acquire Excellence</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA: Minimal Invitation -->
+    <section class="py-60 bg-white border-y border-elegant">
+        <div class="max-w-4xl mx-auto px-10 text-center">
+            <h2 class="font-serif text-6xl lg:text-8xl font-light italic mb-16 tracking-tighter leading-none">Your place in the <br> <span class="not-italic font-semibold text-primary uppercase text-5xl lg:text-7xl">Collective</span> awaits.</h2>
+            <div class="flex justify-center">
+                <a href="register.html" class="px-20 py-8 bg-primary text-white text-xs font-black uppercase tracking-[0.3em] rounded-full hover:bg-accent transition shadow-2xl">Submit Membership Application</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: Editorial Fine Print -->
+    <footer class="pt-60 pb-20 bg-white">
+        <div class="max-w-[1600px] mx-auto px-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-24 mb-40">
+                <div class="lg:col-span-2">
+                    <a href="index.html" class="font-syne font-black text-3xl tracking-tighter uppercase mb-10 block">REN Collective.</a>
+                    <p class="text-sm font-light leading-loose text-slate-400 max-w-md">The Rangpur Entrepreneurs Network is the definitive digital infrastructure for the region's premium businesses. We define the standard of North Bengal excellence.</p>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-12">Templates</h4>
+                    <ul class="space-y-4 text-xs font-bold text-slate-500 uppercase tracking-widest">
+                        <li><a href="sponsorship.html" class="hover:text-primary transition">Sponsorship</a></li>
+                        <li><a href="partner-perks.html" class="hover:text-primary transition">Member Perks</a></li>
+                        <li><a href="press-kit.html" class="hover:text-primary transition">Press Kit</a></li>
+                        <li><a href="vendor-onboarding.html" class="hover:text-primary transition">Onboarding</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-12">Legal</h4>
+                    <ul class="space-y-4 text-xs font-bold text-slate-500 uppercase tracking-widest">
+                        <li><a href="privacy.html" class="hover:text-primary transition">Privacy</a></li>
+                        <li><a href="terms.html" class="hover:text-primary transition">Terms</a></li>
+                        <li><a href="community-guidelines.html" class="hover:text-primary transition">Guidelines</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-12">Contact</h4>
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest leading-loose">Zilla Parishad Bhaban, <br> Rangpur Sadar</p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center pt-20 border-t border-elegant gap-10">
+                <p class="text-[8px] font-black uppercase tracking-[0.5em] text-slate-300">&copy; 2026 REN COLLECTIVE • THE VANGUARD SYSTEM</p>
+                <div class="flex items-center space-x-10 text-xs text-slate-300">
+                    <a href="#" class="hover:text-primary transition">IG</a>
+                    <a href="#" class="hover:text-primary transition">LI</a>
+                    <a href="#" class="hover:text-primary transition">TW</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

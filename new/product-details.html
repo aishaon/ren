@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwoven Silk Sari - REN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#0f172a',
+                        accent: '#8b5cf6',
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body class="bg-white text-slate-900 selection:bg-primary/10 selection:text-primary">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-4 py-4">
+        <div class="max-w-7xl mx-auto glass border border-white/20 rounded-2xl shadow-sm px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/20">
+                    <i class="fa-solid fa-r text-xl font-black"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-secondary to-slate-600">REN</span>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-10">
+                <a href="index.html" class="text-sm font-bold text-slate-500 hover:text-primary transition">Home</a>
+                <a href="about.html" class="text-sm font-bold text-slate-500 hover:text-primary transition">About</a>
+                <a href="membership.html" class="text-sm font-bold text-slate-500 hover:text-primary transition">Membership</a>
+                <a href="directory.html" class="text-sm font-bold text-slate-500 hover:text-primary transition">Entrepreneurs</a>
+                <a href="shop.html" class="text-sm font-bold text-primary">Marketplace</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="cart.html" class="relative p-2 text-slate-600 hover:text-primary transition">
+                    <i class="fa-solid fa-cart-shopping text-xl"></i>
+                    <span class="absolute top-0 right-0 w-4 h-4 bg-primary text-white text-[10px] font-bold rounded-full flex items-center justify-center">3</span>
+                </a>
+                <a href="login.html" class="hidden sm:block text-sm font-bold text-slate-600 hover:text-primary transition">Login</a>
+                <a href="register.html" class="bg-secondary text-white px-6 py-3 rounded-xl text-sm font-bold hover:bg-slate-800 transition shadow-xl shadow-slate-200">Join Network</a>
+                <button class="lg:hidden text-slate-600"><i class="fa-solid fa-bars-staggered text-2xl"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="pt-32 pb-8 bg-slate-50/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <nav class="flex items-center space-x-4 text-[10px] font-black uppercase tracking-widest text-slate-400">
+                <a href="shop.html" class="hover:text-primary transition">Marketplace</a>
+                <i class="fa-solid fa-chevron-right text-[8px]"></i>
+                <a href="#" class="hover:text-primary transition">Textiles</a>
+                <i class="fa-solid fa-chevron-right text-[8px]"></i>
+                <span class="text-secondary">Handwoven Silk Sari</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-start">
+                
+                <!-- Gallery -->
+                <div class="space-y-8">
+                    <div class="aspect-square rounded-[3rem] overflow-hidden bg-white border border-slate-100 shadow-2xl shadow-blue-50">
+                        <img src="https://images.unsplash.com/photo-1590736962234-45520970677a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover" alt="">
+                    </div>
+                    <div class="grid grid-cols-4 gap-6">
+                        <div class="aspect-square rounded-3xl overflow-hidden border-4 border-primary shadow-lg cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1590736962234-45520970677a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="aspect-square rounded-3xl overflow-hidden border-4 border-transparent hover:border-slate-100 transition cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1582234372722-50d7ccc30eb2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="aspect-square rounded-3xl overflow-hidden border-4 border-transparent hover:border-slate-100 transition cursor-pointer text-white relative">
+                            <img src="https://images.unsplash.com/photo-1590736962234-45520970677a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover brightness-50" alt="">
+                            <span class="absolute inset-0 flex items-center justify-center font-black">+2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info -->
+                <div class="flex flex-col">
+                    <div class="mb-10">
+                        <div class="flex items-center space-x-3 mb-6">
+                            <span class="px-4 py-1.5 bg-blue-50 text-primary text-[10px] font-black uppercase tracking-[0.15em] rounded-full border border-blue-100">Handwoven</span>
+                            <span class="px-4 py-1.5 bg-green-50 text-green-600 text-[10px] font-black uppercase tracking-[0.15em] rounded-full border border-green-100">Verified Vendor</span>
+                        </div>
+                        <h1 class="text-4xl lg:text-5xl font-extrabold text-secondary leading-tight mb-6">Premium Handwoven Silk Sari (Traditional Design)</h1>
+                        <div class="flex items-center space-x-6 mb-8">
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-sm font-bold text-slate-400 uppercase tracking-widest">120 Reviews</span>
+                        </div>
+                        <div class="text-4xl font-black text-primary">৳4,500</div>
+                    </div>
+
+                    <div class="p-8 bg-slate-50 rounded-[2.5rem] mb-10 border border-slate-100">
+                        <div class="flex items-center space-x-4 mb-6">
+                            <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg border-2 border-white">
+                                <img src="https://i.pravatar.cc/100?u=kamal" class="w-full h-full object-cover" alt="">
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-1">Store</p>
+                                <h4 class="font-extrabold text-secondary flex items-center">Kamal Textiles <i class="fa-solid fa-circle-check text-primary text-[10px] ml-2"></i></h4>
+                            </div>
+                        </div>
+                        <p class="text-sm text-slate-500 leading-loose">Specializing in traditional weaving from Rangpur for over a decade. Each piece is crafted with love and authenticity.</p>
+                        <a href="profile.html?id=1" class="inline-block mt-6 text-xs font-black text-primary uppercase tracking-widest hover:underline">Explore Store</a>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+                        <button class="py-5 bg-primary text-white rounded-2xl font-bold hover:bg-blue-700 transition shadow-xl shadow-primary/20 flex items-center justify-center group">
+                            <i class="fa-solid fa-cart-plus mr-3 group-hover:scale-110 transition"></i>
+                            Add to Cart
+                        </button>
+                        <button class="py-5 bg-white border-2 border-slate-100 text-secondary rounded-2xl font-bold hover:border-primary hover:text-primary transition flex items-center justify-center group">
+                            <i class="fa-regular fa-heart mr-3 group-hover:scale-110 transition"></i>
+                            Save to Wishlist
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-8 pt-10 border-t border-slate-100">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-blue-50 text-primary rounded-xl flex items-center justify-center">
+                                <i class="fa-solid fa-truck-fast"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-sm font-black text-secondary uppercase tracking-widest">Fast Delivery</h5>
+                                <p class="text-[10px] text-slate-400 font-bold mt-1 uppercase tracking-widest">Within 48-72 hours</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-violet-50 text-accent rounded-xl flex items-center justify-center">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-sm font-black text-secondary uppercase tracking-widest">Authentic</h5>
+                                <p class="text-[10px] text-slate-400 font-bold mt-1 uppercase tracking-widest">100% Genuine Craft</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs Section -->
+            <div class="mt-32">
+                <div class="flex space-x-12 border-b border-slate-100 mb-12 overflow-x-auto whitespace-nowrap">
+                    <button class="pb-6 border-b-4 border-primary text-secondary font-black uppercase tracking-[0.2em] text-xs">Description</button>
+                    <button class="pb-6 border-b-4 border-transparent text-slate-400 font-black uppercase tracking-[0.2em] text-xs hover:text-secondary transition">Specifications</button>
+                    <button class="pb-6 border-b-4 border-transparent text-slate-400 font-black uppercase tracking-[0.2em] text-xs hover:text-secondary transition">Reviews (120)</button>
+                </div>
+                <div class="max-w-4xl space-y-8">
+                    <p class="text-xl text-slate-500 leading-relaxed font-medium">
+                        This premium handwoven silk sari is a masterpiece of traditional Rangpur craftsmanship. Each thread is carefully selected to ensure a soft, luxurious feel while maintaining the durability of the fabric.
+                    </p>
+                    <p class="text-lg text-slate-500 leading-relaxed">
+                        The design features intricate patterns inspired by local folk art, making it perfect for both formal occasions and festive celebrations. We take pride in our zero-chemical dyeing process, which ensures the vibrant colors stay fresh for years.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-slate-400 py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center space-x-3 mb-8">
+                        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+                            <i class="fa-solid fa-r text-sm font-black"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white tracking-tighter">REN</span>
+                    </div>
+                    <p class="text-sm leading-loose mb-8">Rangpur Entrepreneurs Network is the digital foundation for the North Bengal business ecosystem.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-8">Platform</h4>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="shop.html" class="hover:text-primary transition">Marketplace</a></li>
+                        <li><a href="directory.html" class="hover:text-primary transition">Member Directory</a></li>
+                        <li><a href="events.html" class="hover:text-primary transition">Community Events</a></li>
+                        <li><a href="blog.html" class="hover:text-primary transition">Insights & Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-8">Company</h4>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="about.html" class="hover:text-primary transition">Our Story</a></li>
+                        <li><a href="membership.html" class="hover:text-primary transition">Pricing Plans</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition">Contact Us</a></li>
+                        <li><a href="faq.html" class="hover:text-primary transition">Help Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-8">Stay Updated</h4>
+                    <p class="text-xs mb-6">Join our newsletter for the latest local business news.</p>
+                    <div class="flex">
+                        <input type="text" placeholder="Email" class="w-full bg-white/5 border border-white/10 rounded-l-xl px-4 py-3 text-xs outline-none focus:border-primary transition">
+                        <button class="bg-primary text-white px-4 rounded-r-xl hover:bg-blue-700 transition">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-white/5 text-center flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs">&copy; 2026 Rangpur Entrepreneurs Network. All rights reserved.</p>
+                <div class="flex space-x-8 text-xs font-bold uppercase tracking-widest">
+                    <a href="privacy.html" class="hover:text-white transition">Privacy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms</a>
+                    <a href="cookies.html" class="hover:text-white transition">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

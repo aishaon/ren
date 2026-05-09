@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Users - REN Dashboard</title>
+    <title>Categories - REN Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -28,11 +28,11 @@
         <nav class="p-4 space-y-1">
             <div class="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-2 mt-4">Main</div>
             <a href="index.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-home w-5"></i> Dashboard</a>
-            <a href="users.html" class="flex items-center gap-3 px-4 py-3 bg-blue-50 text-blue-600 rounded-lg font-medium"><i class="fas fa-users w-5"></i> Users</a>
+            <a href="users.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-users w-5"></i> Users</a>
             <a href="vendors.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-store w-5"></i> Vendors</a>
             <div class="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-2 mt-6">Marketplace</div>
             <a href="products.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-box w-5"></i> Products</a>
-            <a href="categories.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-tags w-5"></i> Categories</a>
+            <a href="categories.html" class="flex items-center gap-3 px-4 py-3 bg-blue-50 text-blue-600 rounded-lg font-medium"><i class="fas fa-tags w-5"></i> Categories</a>
             <a href="orders.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-shopping-bag w-5"></i> Orders</a>
             <a href="reviews.html" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-star w-5"></i> Reviews</a>
             <div class="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-2 mt-6">Finance</div>
@@ -54,21 +54,16 @@
     <div id="sidebar-overlay" onclick="document.getElementById('sidebar').classList.add('-translate-x-full')" class="fixed inset-0 bg-black/50 z-20 hidden lg:hidden"></div>
     <main class="flex-1 p-6">
         <div class="flex justify-between items-center mb-6">
-            <h1 class="text-2xl font-bold">Manage Users</h1>
-            <div class="flex gap-2">
-                <input type="text" placeholder="Search users..." class="px-4 py-2 border rounded-lg text-sm">
-                <select class="px-4 py-2 border rounded-lg text-sm"><option>All Roles</option><option>Customer</option><option>Vendor</option></select>
-            </div>
+            <h1 class="text-2xl font-bold">Categories</h1>
+            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm"><i class="fas fa-plus mr-2"></i>Add Category</button>
         </div>
-        <div class="bg-white rounded-xl border shadow-sm overflow-hidden">
-            <table class="w-full">
-                <thead class="bg-gray-50"><tr><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">User</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Email</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Role</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Joined</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th></tr></thead>
-                <tbody class="divide-y">
-                    <tr><td class="px-6 py-4"><div class="flex items-center gap-3"><div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center"><i class="fas fa-user text-gray-500"></i></div><span class="font-medium text-sm">Ahmed Hasan</span></div></td><td class="px-6 py-4 text-sm">ahmed@email.com</td><td class="px-6 py-4"><span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Customer</span></td><td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Active</span></td><td class="px-6 py-4 text-sm text-gray-500">Jan 15, 2026</td><td class="px-6 py-4 text-sm"><button class="text-blue-600 hover:underline mr-2">Edit</button><button class="text-red-600 hover:underline">Ban</button></td></tr>
-                    <tr><td class="px-6 py-4"><div class="flex items-center gap-3"><div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center"><i class="fas fa-user text-gray-500"></i></div><span class="font-medium text-sm">Sarah Rahman</span></div></td><td class="px-6 py-4 text-sm">sarah@email.com</td><td class="px-6 py-4"><span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">Vendor</span></td><td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Active</span></td><td class="px-6 py-4 text-sm text-gray-500">Feb 8, 2026</td><td class="px-6 py-4 text-sm"><button class="text-blue-600 hover:underline mr-2">Edit</button><button class="text-red-600 hover:underline">Ban</button></td></tr>
-                    <tr><td class="px-6 py-4"><div class="flex items-center gap-3"><div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center"><i class="fas fa-user text-gray-500"></i></div><span class="font-medium text-sm">Mirza Khan</span></div></td><td class="px-6 py-4 text-sm">mirza@email.com</td><td class="px-6 py-4"><span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Customer</span></td><td class="px-6 py-4"><span class="px-2 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full">Pending</span></td><td class="px-6 py-4 text-sm text-gray-500">Mar 22, 2026</td><td class="px-6 py-4 text-sm"><button class="text-green-600 hover:underline mr-2">Approve</button><button class="text-red-600 hover:underline">Reject</button></td></tr>
-                </tbody>
-            </table>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-xl p-6 border hover:shadow-md transition"><div class="flex justify-between items-start"><div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center"><i class="fas fa-laptop text-blue-600 text-xl"></i></div><div class="flex gap-2"><button class="text-gray-400 hover:text-blue-600"><i class="fas fa-edit"></i></button><button class="text-gray-400 hover:text-red-600"><i class="fas fa-trash"></i></button></div></div><h3 class="font-bold mt-4">Technology</h3><p class="text-sm text-gray-500">156 products</p></div>
+            <div class="bg-white rounded-xl p-6 border hover:shadow-md transition"><div class="flex justify-between items-start"><div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center"><i class="fas fa-tshirt text-pink-600 text-xl"></i></div><div class="flex gap-2"><button class="text-gray-400 hover:text-blue-600"><i class="fas fa-edit"></i></button><button class="text-gray-400 hover:text-red-600"><i class="fas fa-trash"></i></button></div></div><h3 class="font-bold mt-4">Fashion</h3><p class="text-sm text-gray-500">243 products</p></div>
+            <div class="bg-white rounded-xl p-6 border hover:shadow-md transition"><div class="flex justify-between items-start"><div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center"><i class="fas fa-utensils text-green-600 text-xl"></i></div><div class="flex gap-2"><button class="text-gray-400 hover:text-blue-600"><i class="fas fa-edit"></i></button><button class="text-gray-400 hover:text-red-600"><i class="fas fa-trash"></i></button></div></div><h3 class="font-bold mt-4">Food & Beverage</h3><p class="text-sm text-gray-500">89 products</p></div>
+            <div class="bg-white rounded-xl p-6 border hover:shadow-md transition"><div class="flex justify-between items-start"><div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center"><i class="fas fa-seedling text-yellow-600 text-xl"></i></div><div class="flex gap-2"><button class="text-gray-400 hover:text-blue-600"><i class="fas fa-edit"></i></button><button class="text-gray-400 hover:text-red-600"><i class="fas fa-trash"></i></button></div></div><h3 class="font-bold mt-4">Agriculture</h3><p class="text-sm text-gray-500">127 products</p></div>
+            <div class="bg-white rounded-xl p-6 border hover:shadow-md transition"><div class="flex justify-between items-start"><div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center"><i class="fas fa-tools text-purple-600 text-xl"></i></div><div class="flex gap-2"><button class="text-gray-400 hover:text-blue-600"><i class="fas fa-edit"></i></button><button class="text-gray-400 hover:text-red-600"><i class="fas fa-trash"></i></button></div></div><h3 class="font-bold mt-4">Services</h3><p class="text-sm text-gray-500">64 products</p></div>
+            <div class="bg-white rounded-xl p-6 border hover:shadow-md transition"><div class="flex justify-between items-start"><div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center"><i class="fas fa-heartbeat text-red-600 text-xl"></i></div><div class="flex gap-2"><button class="text-gray-400 hover:text-blue-600"><i class="fas fa-edit"></i></button><button class="text-gray-400 hover:text-red-600"><i class="fas fa-trash"></i></button></div></div><h3 class="font-bold mt-4">Health & Wellness</h3><p class="text-sm text-gray-500">38 products</p></div>
         </div>
     </main>
 </div>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog - REN Development Timeline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .timeline-line { left: 50%; transform: translateX(-50%); }
+        .timeline-dot { z-index: 1; }
+        @media (max-width: 768px) { .timeline-line { left: 24px; transform: none; } }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+<!-- Top Bar - Desktop Only -->
+<div class="bg-blue-600 text-white text-sm py-2 hidden lg:block">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+        <div class="flex items-center gap-6">
+            <span class="flex items-center gap-2"><i class="fas fa-phone-alt text-xs"></i> +880 1700-000000</span>
+            <span class="flex items-center gap-2"><i class="fas fa-envelope text-xs"></i> info@ren.org.bd</span>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="#" class="hover:text-blue-200"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="hover:text-blue-200"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-blue-200"><i class="fab fa-linkedin"></i></a>
+            <a href="forum.html" class="ml-2 font-medium text-yellow-300">Forum</a>
+        </div>
+    </div>
+</div>
+
+<nav class="bg-white border-b sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">REN</span>
+                </div>
+                <div class="hidden lg:block">
+                    <h1 class="text-lg font-bold text-gray-900">Rangpur Entrepreneurs Network</h1>
+                </div>
+            </a>
+            <div class="hidden lg:flex items-center gap-1">
+                <a href="index.html" class="px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50">Home</a>
+                <a href="about.html" class="px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50">About</a>
+                <div class="relative group">
+                    <button class="px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50 flex items-center gap-1">Membership <i class="fas fa-chevron-down text-xs"></i></button>
+                    <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border hidden group-hover:block z-50">
+                        <a href="membership.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 rounded-t-xl"><div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center"><i class="fas fa-crown text-blue-600"></i></div><div><p class="font-medium text-sm">Membership Plans</p><p class="text-xs text-gray-500">Choose your plan</p></div></a>
+                        <a href="member-registration.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50"><div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center"><i class="fas fa-user-plus text-green-600"></i></div><div><p class="font-medium text-sm">Member Registration</p><p class="text-xs text-gray-500">Join now</p></div></a>
+                        <a href="member-process.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50"><div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center"><i class="fas fa-list-ol text-purple-600"></i></div><div><p class="font-medium text-sm">Process of Membership</p><p class="text-xs text-gray-500">How to join</p></div></a>
+                        <a href="member-benefits.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50"><div class="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center"><i class="fas fa-gift text-yellow-600"></i></div><div><p class="font-medium text-sm">Benefits of Members</p><p class="text-xs text-gray-500">What you get</p></div></a>
+                        <a href="member-rules.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50"><div class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center"><i class="fas fa-gavel text-red-600"></i></div><div><p class="font-medium text-sm">Membership Rules</p><p class="text-xs text-gray-500">Guidelines</p></div></a>
+                        <a href="member-services.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 rounded-b-xl"><div class="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center"><i class="fas fa-concierge-bell text-indigo-600"></i></div><div><p class="font-medium text-sm">Member Services</p><p class="text-xs text-gray-500">What we offer</p></div></a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50 flex items-center gap-1">Directory <i class="fas fa-chevron-down text-xs"></i></button>
+                    <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border hidden group-hover:block z-50">
+                        <a href="directory.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 rounded-t-xl"><div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center"><i class="fas fa-users text-blue-600"></i></div><div><p class="font-medium text-sm">Entrepreneurs</p><p class="text-xs text-gray-500">Browse all members</p></div></a>
+                        <a href="marketplace.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 rounded-b-xl"><div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center"><i class="fas fa-store text-green-600"></i></div><div><p class="font-medium text-sm">Marketplace</p><p class="text-xs text-gray-500">Products & Services</p></div></a>
+                    </div>
+                </div>
+                <a href="events.html" class="px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50">Events</a>
+                <a href="blog.html" class="px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50">Blog</a>
+            </div>
+            <div class="flex items-center gap-2">
+                <a href="marketplace.html" class="p-2 text-gray-500 hover:text-blue-600 lg:hidden"><i class="fas fa-search"></i></a>
+                <a href="cart.html" class="p-2 text-gray-500 hover:text-blue-600 relative"><i class="fas fa-shopping-cart"></i><span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">0</span></a>
+                <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="lg:hidden p-2 text-gray-600"><i class="fas fa-bars text-xl"></i></button>
+                <a href="users/customer/index.html" class="hidden lg:flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"><i class="fas fa-sign-in-alt"></i><span>Login</span></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div id="mobile-menu" class="hidden lg:hidden bg-white border-b">
+    <div class="px-4 py-4 space-y-2">
+        <a href="index.html" class="block px-4 py-3 rounded-lg text-gray-600">Home</a>
+        <a href="about.html" class="block px-4 py-3 rounded-lg text-gray-600">About</a>
+        <div class="border-t pt-2"><button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full flex justify-between items-center px-4 py-3 text-gray-600"><span>Membership</span><i class="fas fa-chevron-down text-xs"></i></button><div class="hidden pl-4 space-y-1"><a href="membership.html" class="block px-4 py-2 text-gray-500">- Membership Plans</a><a href="member-registration.html" class="block px-4 py-2 text-gray-500">- Member Registration</a><a href="member-process.html" class="block px-4 py-2 text-gray-500">- Process of Membership</a><a href="member-benefits.html" class="block px-4 py-2 text-gray-500">- Benefits of Members</a><a href="member-rules.html" class="block px-4 py-2 text-gray-500">- Membership Rules</a><a href="member-services.html" class="block px-4 py-2 text-gray-500">- Member Services</a></div></div>
+        <div class="border-t pt-2"><button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full flex justify-between items-center px-4 py-3 text-gray-600"><span>Directory</span><i class="fas fa-chevron-down text-xs"></i></button><div class="hidden pl-4 space-y-1"><a href="directory.html" class="block px-4 py-2 text-gray-500">- Entrepreneurs</a><a href="marketplace.html" class="block px-4 py-2 text-gray-500">- Marketplace</a></div></div>
+        <a href="events.html" class="block px-4 py-3 rounded-lg text-gray-600">Events</a>
+        <a href="blog.html" class="block px-4 py-3 rounded-lg text-gray-600">Blog</a>
+        <div class="border-t pt-2 space-y-2"><a href="users/customer/index.html" class="block w-full text-center px-4 py-3 bg-blue-600 text-white rounded-lg">Login / Register</a></div>
+    </div>
+</div>
+
+<main class="py-12">
+    <div class="max-w-6xl mx-auto px-4">
+
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-medium mb-4">
+                <i class="fas fa-code-branch"></i> v2.5.0
+            </div>
+            <h1 class="text-4xl font-bold mb-3">Development Timeline</h1>
+            <p class="text-gray-500">Complete changelog of REN platform updates and improvements</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            <div class="bg-white border rounded-xl p-5 text-center">
+                <p class="text-3xl font-bold text-blue-600">38</p>
+                <p class="text-sm text-gray-500">Total Updates</p>
+            </div>
+            <div class="bg-white border rounded-xl p-5 text-center">
+                <p class="text-3xl font-bold text-green-600">95</p>
+                <p class="text-sm text-gray-500">Pages Created</p>
+            </div>
+            <div class="bg-white border rounded-xl p-5 text-center">
+                <p class="text-3xl font-bold text-purple-600">14</p>
+                <p class="text-sm text-gray-500">Modules Completed</p>
+            </div>
+            <div class="bg-white border rounded-xl p-5 text-center">
+                <p class="text-3xl font-bold text-yellow-600">3</p>
+                <p class="text-sm text-gray-500">Dashboards</p>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="flex flex-wrap gap-3 mb-8">
+            <input type="text" id="searchInput" placeholder="Search updates..." class="px-4 py-2 border rounded-lg text-sm flex-1 min-w-[200px]">
+            <select id="categoryFilter" class="px-4 py-2 border rounded-lg text-sm">
+                <option value="all">All Categories</option>
+                <option value="feature">Feature</option>
+                <option value="improvement">Improvement</option>
+                <option value="marketplace">Marketplace</option>
+                <option value="dashboard">Dashboard</option>
+                <option value="admin">Admin</option>
+                <option value="wallet">Wallet</option>
+                <option value="security">Security</option>
+                <option value="uiux">UI/UX</option>
+                <option value="performance">Performance</option>
+            </select>
+            <select id="statusFilter" class="px-4 py-2 border rounded-lg text-sm">
+                <option value="all">All Status</option>
+                <option value="completed">Completed</option>
+                <option value="in-progress">In Progress</option>
+            </select>
+        </div>
+
+        <!-- Timeline Container -->
+        <div class="relative" id="timeline">
+            <div class="absolute top-0 bottom-0 left-1/2 w-0.5 bg-gray-200 hidden md:block timeline-line"></div>
+
+            <!-- v2.5.0 -->
+            <div class="update-entry relative mb-10" data-category="dashboard" data-status="completed">
+                <div class="md:flex items-center justify-center">
+                    <div class="md:w-5/12 md:text-right md:pr-10">
+                        <div class="bg-white border rounded-xl p-6 shadow-sm md:mr-0 mr-10">
+                            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Completed</span><span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">Dashboard</span></div>
+                            <h3 class="font-bold text-lg">Customer Dashboard Suite</h3>
+                            <p class="text-sm text-gray-500 mt-1">Created 8 customer pages including orders, addresses, returns, reviews, membership status, notifications, and support tickets.</p>
+                            <div class="mt-3 flex flex-wrap gap-1"><span class="px-2 py-1 bg-gray-100 text-xs rounded">users/customer/</span><span class="px-2 py-1 bg-gray-100 text-xs rounded">8 pages</span></div>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex w-2/12 justify-center">
+                        <div class="w-10 h-10 bg-purple-600 text-white rounded-full flex items-center justify-center timeline-dot relative z-10"><i class="fas fa-user text-sm"></i></div>
+                    </div>
+                    <div class="md:w-5/12 md:pl-10 hidden md:block">
+                        <div class="text-sm text-gray-400 font-medium">May 02, 2026</div>
+                        <div class="text-xs text-gray-400">v2.5.0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- v2.4.0 -->
+            <div class="update-entry relative mb-10" data-category="marketplace" data-status="completed">
+                <div class="md:flex items-center justify-center">
+                    <div class="md:w-5/12 md:text-right md:pr-10 hidden md:block">
+                        <div class="text-sm text-gray-400 font-medium">May 02, 2026</div>
+                        <div class="text-xs text-gray-400">v2.4.0</div>
+                    </div>
+                    <div class="hidden md:flex w-2/12 justify-center">
+                        <div class="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center timeline-dot relative z-10"><i class="fas fa-shop text-sm"></i></div>
+                    </div>
+                    <div class="md:w-5/12 md:pl-10">
+                        <div class="bg-white border rounded-xl p-6 shadow-sm ml-10 md:ml-0">
+                            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Completed</span><span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Marketplace</span></div>
+                            <h3 class="font-bold text-lg">Marketplace Expansion</h3>
+                            <p class="text-sm text-gray-500 mt-1">Added vendor storefront, product comparison, search with filters, wishlist management, and order tracking system.</p>
+                            <div class="mt-3 flex flex-wrap gap-1"><span class="px-2 py-1 bg-gray-100 text-xs rounded">vendor-store.html</span><span class="px-2 py-1 bg-gray-100 text-xs rounded">compare-products.html</span><span class="px-2 py-1 bg-gray-100 text-xs rounded">search.html</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- v2.3.0 -->
+            <div class="update-entry relative mb-10" data-category="dashboard" data-status="completed">
+                <div class="md:flex items-center justify-center">
+                    <div class="md:w-5/12 md:text-right md:pr-10">
+                        <div class="bg-white border rounded-xl p-6 shadow-sm md:mr-0 mr-10">
+                            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Completed</span><span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">Dashboard</span></div>
+                            <h3 class="font-bold text-lg">Vendor Dashboard Suite</h3>
+                            <p class="text-sm text-gray-500 mt-1">Built 13 vendor pages with products management, inventory, analytics, earnings, coupons, shipping zones, store settings, and review management.</p>
+                            <div class="mt-3 flex flex-wrap gap-1"><span class="px-2 py-1 bg-gray-100 text-xs rounded">users/vendor/</span><span class="px-2 py-1 bg-gray-100 text-xs rounded">13 pages</span></div>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex w-2/12 justify-center">
+                        <div class="w-10 h-10 bg-orange-600 text-white rounded-full flex items-center justify-center timeline-dot relative z-10"><i class="fas fa-store text-sm"></i></div>
+                    </div>
+                    <div class="md:w-5/12 md:pl-10 hidden md:block">
+                        <div class="text-sm text-gray-400 font-medium">May 02, 2026</div>
+                        <div class="text-xs text-gray-400">v2.3.0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- v2.2.0 -->
+            <div class="update-entry relative mb-10" data-category="admin" data-status="completed">
+                <div class="md:flex items-center justify-center">
+                    <div class="md:w-5/12 md:text-right md:pr-10 hidden md:block">
+                        <div class="text-sm text-gray-400 font-medium">May 02, 2026</div>
+                        <div class="text-xs text-gray-400">v2.2.0</div>
+                    </div>
+                    <div class="hidden md:flex w-2/12 justify-center">
+                        <div class="w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center timeline-dot relative z-10"><i class="fas fa-shield text-sm"></i></div>
+                    </div>
+                    <div class="md:w-5/12 md:pl-10">
+                        <div class="bg-white border rounded-xl p-6 shadow-sm ml-10 md:ml-0">
+                            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Completed</span><span class="px-2 py-1 bg-red-100 text-red-700 text-xs rounded-full">Admin</span></div>
+                            <h3 class="font-bold text-lg">Admin Dashboard Suite</h3>
+                            <p class="text-sm text-gray-500 mt-1">Expanded admin panel with 18 pages: product/category/order management, reviews moderation, commission settings, withdrawals, events, content, banners, reports, activity logs, membership plans, and support tickets.</p>
+                            <div class="mt-3 flex flex-wrap gap-1"><span class="px-2 py-1 bg-gray-100 text-xs rounded">users/admin/</span><span class="px-2 py-1 bg-gray-100 text-xs rounded">18 pages</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- v2.1.0 -->
+            <div class="update-entry relative mb-10" data-category="uiux" data-status="completed">
+                <div class="md:flex items-center justify-center">
+                    <div class="md:w-5/12 md:text-right md:pr-10">
+                        <div class="bg-white border rounded-xl p-6 shadow-sm md:mr-0 mr-10">
+                            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Completed</span><span class="px-2 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full">UI/UX</span></div>
+                            <h3 class="font-bold text-lg">Dashboard Architecture Overhaul</h3>
+                            <p class="text-sm text-gray-500 mt-1">Replaced public front-end navigation on all user dashboard pages with role-specific sidebar navigation. Admin, Vendor, and Customer panels now have dedicated layouts.</p>
+                            <div class="mt-3 flex flex-wrap gap-1"><span class="px-2 py-1 bg-gray-100 text-xs rounded">Dashboard rebuild</span><span class="px-2 py-1 bg-gray-100 text-xs rounded">Role-based menus</span></div>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex w-2/12 justify-center">
+                        <div class="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center timeline-dot relative z-10"><i class="fas fa-paint-brush text-sm"></i></div>
+                    </div>
+                    <div class="md:w-5/12 md:pl-10 hidden md:block">
+                        <div class="text-sm text-gray-400 font-medium">May 02, 2026</div>
+                        <div class="text-xs text-gray-400">v2.1.0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- v2.0.0 -->
+            <div class="update-entry relative mb-10" data-category="feature" data-status="completed">
+                <div class="md:flex items-center justify-center">
+                    <div class="md:w-5/12 md:text-right md:pr-10 hidden md:block">
+                        <div class="text-sm text-gray-400 font-medium">May 01, 2026</div>
+                        <div class="text-xs text-gray-400">v2.0.0</div>
+                    </div>
+                    <div class="hidden md:flex w-2/12 justify-center">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center timeline-dot relative z-10 ring-4 ring-blue-200"><i class="fas fa-star text-sm"></i></div>
+                    </div>
+                    <div class="md:w-5/12 md:pl-10">
+                        <div class="bg-white border-2 border-blue-400 rounded-xl p-6 shadow-md ml-10 md:ml-0">
+                            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Completed</span><span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Feature</span><span class="px-2 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full">Latest</span></div>
+                            <h3 class="font-bold text-lg">25 New Feature Pages</h3>
+                            <p class="text-sm text-gray-500 mt-1">Major platform expansion adding marketplace features, community pages, business resources, user notifications, support tickets, invoice system, career listings, and partner programs.</p>
+                            <div class="mt-3 flex flex-wrap gap-1"><span class="px-2 py-1 bg-gray-100 text-xs rounded">24 new pages</span><span class="px-2 py-1 bg-gray-100 text-xs rounded">Full coverage</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- v1.7.0 -->
+            <div class="update-entry relative mb-10" data-category="feature" data-status="completed">
+                <div class="md:flex items-center justify-center">
+                    <div class="md:w-5/12 md:text-right md:pr-10">
+                        <div class="bg-white border rounded-xl p-6 shadow-sm md:mr-0 mr-10">
+                            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Completed</span><span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Feature</span></div>
+                            <h3 class="font-bold text-lg">Membership System & Legal Pages</h3>
+                            <p class="text-sm text-gray-500 mt-1">Created 5 membership pages (registration, process, benefits, rules, services) and 5 legal pages (FAQ, privacy policy, terms, refund policy, contact). Added Membership dropdown to navigation.</p>
+                            <div class="mt-3 flex flex-wrap gap-1"><span class="px-2 py-1 bg-gray-100 text-xs rounded">member-*.html</span><span class="px-2 py-1 bg-gray-100 text-xs rounded">privacy/terms</span></div>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex w-2/12 justify-center">
+                        <div class="w-10 h-10 bg-yellow-600 text-white rounded-full flex items-center justify-center timeline-dot relative z-10"><i class="fas fa-crown text-sm"></i></div>
+                    </div>
+                    <div class="md:w-5/12 md:pl-10 hidden md:block">
+                        <div class="text-sm text-gray-400 font-medium">May 01, 2026</div>
+                        <div class="text-xs text-gray-400">v1.7.0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- v1.6.0 -->
+            <div class="update-entry relative mb-10" data-category="improvement" data-status="completed">
+                <div class="md:flex items-center justify-center">
+                    <div class="md:w-5/12 md:text-right md:pr-10 hidden md:block">
+                        <div class="text-sm text-gray-400 font-medium">May 01, 2026</div>
+                        <div class="text-xs text-gray-400">v1.6.0</div>
+                    </div>
+                    <div class="hidden md:flex w-2/12 justify-center">
+                        <div class="w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center timeline-dot relative z-10"><i class="fas fa-sitemap text-sm"></i></div>
+                    </div>
+                    <div class="md:w-5/12 md:pl-10">
+                        <div class="bg-white border rounded-xl p-6 shadow-sm ml-10 md:ml-0">
+                            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Completed</span><span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">Improvement</span></div>
+                            <h3 class="font-bold text-lg">Sitemap & Static Conversion</h3>
+                            <p class="text-sm text-gray-500 mt-1">Created fully linked sitemap with all 95 pages. Converted entire PHP codebase to static HTML for direct browser compatibility. Added user dashboard pages to sitemap.</p>
+                            <div class="mt-3 flex flex-wrap gap-1"><span class="px-2 py-1 bg-gray-100 text-xs rounded">sitemap.html</span><span class="px-2 py-1 bg-gray-100 text-xs rounded">PHP → HTML</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- v1.5.0 -->
+            <div class="update-entry relative mb-10" data-category="uiux" data-status="completed">
+                <div class="md:flex items-center justify-center">
+                    <div class="md:w-5/12 md:text-right md:pr-10">
+                        <div class="bg-white border rounded-xl p-6 shadow-sm md:mr-0 mr-10">
+                            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Completed</span><span class="px-2 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full">UI/UX</span></div>
+                            <h3 class="font-bold text-lg">Mobile Responsive Navigation</h3>
+                            <p class="text-sm text-gray-500 mt-1">Implemented full mobile-responsive navigation with hamburger menu, accordion dropdowns for Membership and Directory, and mobile-friendly brand layout.</p>
+                            <div class="mt-3 flex flex-wrap gap-1"><span class="px-2 py-1 bg-gray-100 text-xs rounded">header.html</span><span class="px-2 py-1 bg-gray-100 text-xs rounded">Mobile nav</span></div>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex w-2/12 justify-center">
+                        <div class="w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center timeline-dot relative z-10"><i class="fas fa-mobile-alt text-sm"></i></div>
+                    </div>
+                    <div class="md:w-5/12 md:pl-10 hidden md:block">
+                        <div class="text-sm text-gray-400 font-medium">Apr 30, 2026</div>
+                        <div class="text-xs text-gray-400">v1.5.0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- v1.4.0 -->
+            <div class="update-entry relative mb-10" data-category="feature" data-status="completed">
+                <div class="md:flex items-center justify-center">
+                    <div class="md:w-5/12 md:text-right md:pr-10 hidden md:block">
+                        <div class="text-sm text-gray-400 font-medium">Apr 30, 2026</div>
+                        <div class="text-xs text-gray-400">v1.4.0</div>
+                    </div>
+                    <div class="hidden md:flex w-2/12 justify-center">
+                        <div class="w-10 h-10 bg-pink-600 text-white rounded-full flex items-center justify-center timeline-dot relative z-10"><i class="fas fa-gavel text-sm"></i></div>
+                    </div>
+                    <div class="md:w-5/12 md:pl-10">
+                        <div class="bg-white border rounded-xl p-6 shadow-sm ml-10 md:ml-0">
+                            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Completed</span><span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Feature</span></div>
+                            <h3 class="font-bold text-lg">Contact & Legal Pages</h3>
+                            <p class="text-sm text-gray-500 mt-1">Added contact page with form, phone/email/social info, and map. Updated footer with "Legal Info" column linking to privacy, terms, refund, FAQ, and contact pages.</p>
+                            <div class="mt-3 flex flex-wrap gap-1"><span class="px-2 py-1 bg-gray-100 text-xs rounded">contact.html</span><span class="px-2 py-1 bg-gray-100 text-xs rounded">Footer update</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- v1.3.0 -->
+            <div class="update-entry relative mb-10" data-category="feature" data-status="completed">
+                <div class="md:flex items-center justify-center">
+                    <div class="md:w-5/12 md:text-right md:pr-10">
+                        <div class="bg-white border rounded-xl p-6 shadow-sm md:mr-0 mr-10">
+                            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Completed</span><span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Feature</span></div>
+                            <h3 class="font-bold text-lg">User Dashboard Panels</h3>
+                            <p class="text-sm text-gray-500 mt-1">Established admin, vendor, and customer dashboard directories under /users/. Created login/register pages connected to dashboard access points.</p>
+                            <div class="mt-3 flex flex-wrap gap-1"><span class="px-2 py-1 bg-gray-100 text-xs rounded">users/admin/</span><span class="px-2 py-1 bg-gray-100 text-xs rounded">users/vendor/</span><span class="px-2 py-1 bg-gray-100 text-xs rounded">users/customer/</span></div>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex w-2/12 justify-center">
+                        <div class="w-10 h-10 bg-gray-700 text-white rounded-full flex items-center justify-center timeline-dot relative z-10"><i class="fas fa-users-cog text-sm"></i></div>
+                    </div>
+                    <div class="md:w-5/12 md:pl-10 hidden md:block">
+                        <div class="text-sm text-gray-400 font-medium">Apr 28, 2026</div>
+                        <div class="text-xs text-gray-400">v1.3.0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- v1.2.0 -->
+            <div class="update-entry relative mb-10" data-category="marketplace" data-status="completed">
+                <div class="md:flex items-center justify-center">
+                    <div class="md:w-5/12 md:text-right md:pr-10 hidden md:block">
+                        <div class="text-sm text-gray-400 font-medium">Apr 27, 2026</div>
+                        <div class="text-xs text-gray-400">v1.2.0</div>
+                    </div>
+                    <div class="hidden md:flex w-2/12 justify-center">
+                        <div class="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center timeline-dot relative z-10"><i class="fas fa-shopping-cart text-sm"></i></div>
+                    </div>
+                    <div class="md:w-5/12 md:pl-10">
+                        <div class="bg-white border rounded-xl p-6 shadow-sm ml-10 md:ml-0">
+                            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Completed</span><span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Marketplace</span></div>
+                            <h3 class="font-bold text-lg">Marketplace & E-Commerce Pages</h3>
+                            <p class="text-sm text-gray-500 mt-1">Built marketplace homepage, product details, cart, checkout, order success, wallet, and withdraw pages with full shopping flow.</p>
+                            <div class="mt-3 flex flex-wrap gap-1"><span class="px-2 py-1 bg-gray-100 text-xs rounded">marketplace.html</span><span class="px-2 py-1 bg-gray-100 text-xs rounded">cart/checkout</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- v1.1.0 -->
+            <div class="update-entry relative mb-10" data-category="improvement" data-status="completed">
+                <div class="md:flex items-center justify-center">
+                    <div class="md:w-5/12 md:text-right md:pr-10">
+                        <div class="bg-white border rounded-xl p-6 shadow-sm md:mr-0 mr-10">
+                            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Completed</span><span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">Improvement</span></div>
+                            <h3 class="font-bold text-lg">PHP Modular System Migration</h3>
+                            <p class="text-sm text-gray-500 mt-1">Converted entire static HTML site to modular PHP system with reusable header, footer, and config components. Implemented dynamic navigation with active page highlighting.</p>
+                            <div class="mt-3 flex flex-wrap gap-1"><span class="px-2 py-1 bg-gray-100 text-xs rounded">config.php</span><span class="px-2 py-1 bg-gray-100 text-xs rounded">header.php</span><span class="px-2 py-1 bg-gray-100 text-xs rounded">footer.php</span></div>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex w-2/12 justify-center">
+                        <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center timeline-dot relative z-10"><i class="fas fa-code text-sm"></i></div>
+                    </div>
+                    <div class="md:w-5/12 md:pl-10 hidden md:block">
+                        <div class="text-sm text-gray-400 font-medium">Apr 25, 2026</div>
+                        <div class="text-xs text-gray-400">v1.1.0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- v1.0.0 -->
+            <div class="update-entry relative" data-category="feature" data-status="completed">
+                <div class="md:flex items-center justify-center">
+                    <div class="md:w-5/12 md:text-right md:pr-10 hidden md:block">
+                        <div class="text-sm text-gray-400 font-medium">Apr 25, 2026</div>
+                        <div class="text-xs text-gray-400">v1.0.0</div>
+                    </div>
+                    <div class="hidden md:flex w-2/12 justify-center">
+                        <div class="w-12 h-12 bg-gray-800 text-white rounded-full flex items-center justify-center timeline-dot relative z-10 ring-4 ring-gray-300"><i class="fas fa-flag-checkered text-sm"></i></div>
+                    </div>
+                    <div class="md:w-5/12 md:pl-10">
+                        <div class="bg-white border rounded-xl p-6 shadow-sm ml-10 md:ml-0">
+                            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Completed</span><span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Feature</span></div>
+                            <h3 class="font-bold text-lg">Initial Platform Launch</h3>
+                            <p class="text-sm text-gray-500 mt-1">Complete REN website structure with 29 HTML pages. Home page with hero, features, stats, testimonials. Directory, marketplace, events, blog, forum, membership, and about pages.</p>
+                            <div class="mt-3 flex flex-wrap gap-1"><span class="px-2 py-1 bg-gray-100 text-xs rounded">29 pages</span><span class="px-2 py-1 bg-gray-100 text-xs rounded">Core structure</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- No Results Message -->
+        <div id="noResults" class="hidden text-center py-16">
+            <i class="fas fa-search text-4xl text-gray-300 mb-4"></i>
+            <p class="text-gray-500">No updates match your search criteria.</p>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="mt-16 mb-8 text-center border-t pt-8">
+            <div class="inline-block bg-gray-100 rounded-lg px-6 py-4">
+                <p class="text-sm text-gray-600">
+                    <i class="fas fa-code-branch mr-1"></i> Current Version: <strong>v2.5.0</strong> |
+                    <i class="fas fa-file-code mr-1 ml-3"></i> Total Pages: <strong>95</strong> |
+                    <i class="fas fa-layer-group mr-1 ml-3"></i> Last Updated: <strong>May 02, 2026</strong>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
+            <div><div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center"><span class="font-bold">REN</span></div><div><h3 class="font-bold">Rangpur Entrepreneurs Network</h3></div></div><p class="text-gray-400 text-sm mb-4">Empowering entrepreneurs of Rangpur through digital innovation and community growth.</p><div class="flex gap-3"><a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600"><i class="fab fa-facebook"></i></a><a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600"><i class="fab fa-twitter"></i></a><a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600"><i class="fab fa-linkedin"></i></a></div></div>
+            <div><h4 class="font-semibold mb-4">Quick Links</h4><ul class="space-y-2 text-sm text-gray-400"><li><a href="about.html" class="hover:text-white">About Us</a></li><li><a href="membership.html" class="hover:text-white">Membership</a></li><li><a href="directory.html" class="hover:text-white">Directory</a></li><li><a href="marketplace.html" class="hover:text-white">Marketplace</a></li><li><a href="events.html" class="hover:text-white">Events</a></li></ul></div>
+            <div><h4 class="font-semibold mb-4">Categories</h4><ul class="space-y-2 text-sm text-gray-400"><li><a href="marketplace.html" class="hover:text-white">Technology</a></li><li><a href="marketplace.html" class="hover:text-white">Fashion</a></li><li><a href="marketplace.html" class="hover:text-white">Food & Beverage</a></li><li><a href="marketplace.html" class="hover:text-white">Agriculture</a></li><li><a href="marketplace.html" class="hover:text-white">Services</a></li></ul></div>
+            <div><h4 class="font-semibold mb-4">Legal Info</h4><ul class="space-y-2 text-sm text-gray-400"><li><a href="privacy.html" class="hover:text-white">Privacy Policy</a></li><li><a href="terms.html" class="hover:text-white">Terms of Service</a></li><li><a href="refund.html" class="hover:text-white">Refund Policy</a></li><li><a href="faq.html" class="hover:text-white">FAQ</a></li><li><a href="contact.html" class="hover:text-white">Contact Us</a></li></ul></div>
+            <div><h4 class="font-semibold mb-4">Contact</h4><ul class="space-y-2 text-sm text-gray-400"><li class="flex items-center gap-2"><i class="fas fa-map-marker-alt"></i> Rangpur, Bangladesh</li><li class="flex items-center gap-2"><i class="fas fa-phone"></i> +880 1700-000000</li><li class="flex items-center gap-2"><i class="fas fa-envelope"></i> info@ren.org.bd</li></ul></div>
+        </div>
+        <div class="border-t border-gray-800 pt-8 flex flex-wrap justify-between items-center text-sm text-gray-400">
+            <p>&copy; 2026 Rangpur Entrepreneurs Network. All rights reserved.</p>
+            <div class="flex gap-6"><a href="privacy.html" class="hover:text-white">Privacy Policy</a><a href="terms.html" class="hover:text-white">Terms</a><a href="refund.html" class="hover:text-white">Refund Policy</a><a href="faq.html" class="hover:text-white">FAQ</a><a href="contact.html" class="hover:text-white">Contact</a></div>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function() {
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const statusFilter = document.getElementById('statusFilter');
+    const entries = document.querySelectorAll('.update-entry');
+    const noResults = document.getElementById('noResults');
+
+    function filterUpdates() {
+        const search = searchInput.value.toLowerCase();
+        const category = categoryFilter.value;
+        const status = statusFilter.value;
+        let visible = 0;
+
+        entries.forEach(entry => {
+            const text = entry.textContent.toLowerCase();
+            const cat = entry.dataset.category;
+            const stat = entry.dataset.status;
+            const matchSearch = !search || text.includes(search);
+            const matchCat = category === 'all' || cat === category;
+            const matchStatus = status === 'all' || stat === status;
+
+            if (matchSearch && matchCat && matchStatus) {
+                entry.classList.remove('hidden');
+                visible++;
+            } else {
+                entry.classList.add('hidden');
+            }
+        });
+
+        noResults.classList.toggle('hidden', visible > 0);
+    }
+
+    searchInput.addEventListener('input', filterUpdates);
+    categoryFilter.addEventListener('change', filterUpdates);
+    statusFilter.addEventListener('change', filterUpdates);
+})();
+</script>
+
+</body>
+</html>

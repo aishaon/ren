@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earnings & Withdraw - Vendor Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#0f172a',
+                        accent: '#8b5cf6',
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-primary/10 selection:text-primary min-h-screen">
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-72 bg-secondary min-h-screen fixed left-0 top-0 text-slate-400 p-8 flex flex-col shadow-2xl z-40">
+            <div class="flex items-center space-x-3 mb-16 px-4">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white shadow-lg">
+                    <i class="fa-solid fa-r text-xl font-black"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tighter text-white">REN</span>
+            </div>
+
+            <nav class="space-y-3 flex-grow">
+                <a href="vendor-dashboard.html" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-white/5 hover:text-white transition group font-bold">
+                    <i class="fa-solid fa-chart-pie text-sm group-hover:text-primary"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="add-product.html" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-white/5 hover:text-white transition group font-bold">
+                    <i class="fa-solid fa-layer-group text-sm group-hover:text-primary"></i>
+                    <span>Products</span>
+                </a>
+                <a href="#" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-white/5 hover:text-white transition group font-bold">
+                    <i class="fa-solid fa-truck-fast text-sm group-hover:text-primary"></i>
+                    <span>Orders</span>
+                </a>
+                <a href="#" class="flex items-center space-x-4 px-6 py-4 rounded-2xl bg-primary text-white font-bold shadow-xl shadow-primary/20 transition-all">
+                    <i class="fa-solid fa-money-bill-transfer text-sm"></i>
+                    <span>Earnings</span>
+                </a>
+            </nav>
+
+            <div class="pt-8 border-t border-white/5">
+                <a href="vendor-dashboard.html" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-red-500/10 hover:text-red-500 transition group font-bold">
+                    <i class="fa-solid fa-arrow-left text-sm transition"></i>
+                    <span>Back to Dash</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="ml-72 flex-grow">
+            <!-- Header -->
+            <header class="h-24 bg-white/80 backdrop-blur-md border-b border-slate-100 px-12 flex items-center justify-between sticky top-0 z-30">
+                <h2 class="text-xl font-black text-secondary tracking-tight">Earnings & Wallet</h2>
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-3 px-4 py-2 bg-blue-50 rounded-xl border border-blue-100">
+                        <span class="text-[10px] font-black text-primary uppercase tracking-widest">Commission: 10%</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Body -->
+            <div class="p-12 pb-24">
+                <div class="max-w-5xl mx-auto">
+                    
+                    <!-- Balance Summary -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                        <div class="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-sm col-span-2 flex items-center justify-between relative overflow-hidden group hover:shadow-xl transition duration-500">
+                            <!-- Background decoration -->
+                            <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all"></div>
+                            
+                            <div class="relative z-10">
+                                <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">Available Balance</p>
+                                <h3 class="text-5xl font-black text-secondary tracking-tighter">৳42,850</h3>
+                                <p class="mt-4 text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center">
+                                    <i class="fa-solid fa-clock-rotate-left mr-2 text-primary"></i> Last Payout: April 20, 2026
+                                </p>
+                            </div>
+                            <div class="relative z-10">
+                                <button class="bg-secondary text-white px-8 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-slate-800 transition shadow-2xl shadow-secondary/20">Request Payout</button>
+                            </div>
+                        </div>
+                        <div class="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-sm flex flex-col justify-center hover:shadow-xl transition duration-500">
+                            <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">Pending Clearance</p>
+                            <h3 class="text-3xl font-black text-secondary tracking-tighter">৳8,400</h3>
+                            <p class="mt-4 text-[10px] font-bold text-slate-300 uppercase tracking-widest leading-loose">Funds from recent orders <br> cleared after 7 days.</p>
+                        </div>
+                    </div>
+
+                    <!-- Payout Request Form -->
+                    <div class="grid lg:grid-cols-3 gap-12 mb-16">
+                        <div class="lg:col-span-2">
+                            <div class="bg-white p-12 rounded-[3.5rem] border border-slate-100 shadow-sm">
+                                <h3 class="text-xl font-black text-secondary uppercase tracking-widest mb-10 pb-4 border-b border-slate-50">New Payout Request</h3>
+                                <form class="space-y-8">
+                                    <div class="grid sm:grid-cols-2 gap-8">
+                                        <div>
+                                            <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-2">Amount to Withdraw (৳)</label>
+                                            <input type="number" class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-primary/30 outline-none transition-all font-black text-xl" placeholder="0.00">
+                                        </div>
+                                        <div>
+                                            <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-2">Method</label>
+                                            <select class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-primary/30 outline-none transition-all font-bold appearance-none cursor-pointer">
+                                                <option>bKash Personal</option>
+                                                <option>Nagad Personal</option>
+                                                <option>Bank Transfer (EFT)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-2">Account Number / Details</label>
+                                        <input type="text" class="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-primary/30 outline-none transition-all font-medium" placeholder="Enter phone number or bank details">
+                                    </div>
+                                    <div class="p-6 bg-blue-50 rounded-2xl border border-blue-100 flex items-start space-x-4">
+                                        <i class="fa-solid fa-circle-info text-primary mt-1"></i>
+                                        <p class="text-xs text-slate-600 font-medium leading-relaxed">Pout requests are processed within 24-48 business hours. Ensure your account details are correct to avoid delays.</p>
+                                    </div>
+                                    <button type="submit" class="w-full py-5 bg-primary text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-blue-700 transition shadow-xl shadow-primary/20">Submit Payout Request</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="space-y-8">
+                            <div class="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-sm">
+                                <h4 class="font-black text-xs uppercase tracking-widest text-slate-400 mb-8">Payout Limits</h4>
+                                <div class="space-y-6">
+                                    <div class="flex justify-between items-center text-sm font-bold">
+                                        <span class="text-slate-500">Min. Payout</span>
+                                        <span class="text-secondary">৳500</span>
+                                    </div>
+                                    <div class="flex justify-between items-center text-sm font-bold">
+                                        <span class="text-slate-500">Daily Max</span>
+                                        <span class="text-secondary">৳25,000</span>
+                                    </div>
+                                    <div class="flex justify-between items-center text-sm font-bold pt-6 border-t border-slate-50">
+                                        <span class="text-slate-500">Weekly Max</span>
+                                        <span class="text-secondary">৳100,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-secondary rounded-[3rem] p-10 text-white shadow-2xl">
+                                <h4 class="font-black text-sm uppercase tracking-widest mb-6">Need Help?</h4>
+                                <p class="text-sm text-slate-400 leading-relaxed mb-8 italic">"Having issues with your payout? Our financial support team is available 24/7."</p>
+                                <button class="text-xs font-black text-primary uppercase tracking-widest hover:underline">Contact Finance</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transaction History -->
+                    <div class="bg-white rounded-[3.5rem] border border-slate-100 shadow-sm overflow-hidden hover:shadow-2xl transition duration-700">
+                        <div class="p-10 border-b border-slate-50">
+                            <h3 class="text-xl font-black text-secondary uppercase tracking-widest">Transaction History</h3>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead class="bg-slate-50/50 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                                    <tr>
+                                        <th class="px-10 py-6">Reference</th>
+                                        <th class="px-10 py-6">Type</th>
+                                        <th class="px-10 py-6">Date</th>
+                                        <th class="px-10 py-6 text-right">Amount</th>
+                                        <th class="px-10 py-6 text-center">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-50 text-sm font-bold text-slate-600">
+                                    <tr class="hover:bg-slate-50/50 transition">
+                                        <td class="px-10 py-8 text-secondary">#WDR-9921</td>
+                                        <td class="px-10 py-8 uppercase tracking-widest text-[10px] text-slate-400">Withdrawal</td>
+                                        <td class="px-10 py-8 text-slate-400 font-medium">April 20, 2026</td>
+                                        <td class="px-10 py-8 text-red-500 text-right">-৳15,000</td>
+                                        <td class="px-10 py-8 text-center">
+                                            <span class="px-4 py-1.5 bg-green-50 text-green-600 text-[10px] font-black uppercase tracking-widest rounded-full border border-green-100">Paid</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50/50 transition">
+                                        <td class="px-10 py-8 text-secondary">#SLS-8842</td>
+                                        <td class="px-10 py-8 uppercase tracking-widest text-[10px] text-slate-400">Sale Earnings</td>
+                                        <td class="px-10 py-8 text-slate-400 font-medium">April 18, 2026</td>
+                                        <td class="px-10 py-8 text-green-500 text-right">+৳4,050</td>
+                                        <td class="px-10 py-8 text-center">
+                                            <span class="px-4 py-1.5 bg-blue-50 text-primary text-[10px] font-black uppercase tracking-widest rounded-full border border-blue-100">Completed</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

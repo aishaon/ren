@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Dashboard - REN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#0f172a',
+                        accent: '#8b5cf6',
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-primary/10 selection:text-primary min-h-screen">
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-72 bg-secondary min-h-screen fixed left-0 top-0 text-slate-400 p-8 flex flex-col shadow-2xl z-40">
+            <div class="flex items-center space-x-3 mb-16 px-4">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/20">
+                    <i class="fa-solid fa-r text-xl font-black"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tighter text-white">REN</span>
+            </div>
+
+            <nav class="space-y-3 flex-grow">
+                <a href="#" class="flex items-center space-x-4 px-6 py-4 rounded-2xl bg-primary text-white font-bold shadow-xl shadow-primary/20 transition-all">
+                    <i class="fa-solid fa-chart-pie text-sm"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-white/5 hover:text-white transition group font-bold">
+                    <i class="fa-solid fa-layer-group text-sm group-hover:text-primary"></i>
+                    <span>Products</span>
+                </a>
+                <a href="#" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-white/5 hover:text-white transition group font-bold">
+                    <i class="fa-solid fa-truck-fast text-sm group-hover:text-primary"></i>
+                    <span>Orders</span>
+                </a>
+                <a href="#" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-white/5 hover:text-white transition group font-bold">
+                    <i class="fa-solid fa-money-bill-transfer text-sm group-hover:text-primary"></i>
+                    <span>Earnings</span>
+                </a>
+                <a href="#" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-white/5 hover:text-white transition group font-bold">
+                    <i class="fa-solid fa-id-card text-sm group-hover:text-primary"></i>
+                    <span>Shop Profile</span>
+                </a>
+                <a href="#" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-white/5 hover:text-white transition group font-bold">
+                    <i class="fa-solid fa-gear text-sm group-hover:text-primary"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="pt-8 border-t border-white/5">
+                <a href="index.html" class="flex items-center space-x-4 px-6 py-4 rounded-2xl hover:bg-red-500/10 hover:text-red-500 transition group font-bold">
+                    <i class="fa-solid fa-arrow-right-from-bracket text-sm group-hover:rotate-180 transition duration-500"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="ml-72 flex-grow">
+            <!-- Header -->
+            <header class="h-24 bg-white/80 backdrop-blur-md border-b border-slate-100 px-12 flex items-center justify-between sticky top-0 z-30">
+                <div class="flex items-center space-x-6">
+                    <h2 class="text-lg font-extrabold text-secondary">Kamal Textiles</h2>
+                    <span class="px-4 py-1.5 bg-green-50 text-green-600 text-[10px] font-black uppercase tracking-widest rounded-full border border-green-100 flex items-center">
+                        <i class="fa-solid fa-circle-check mr-2"></i> Verified Elite
+                    </span>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <button class="bg-primary text-white px-6 py-3 rounded-xl text-xs font-black uppercase tracking-widest hover:bg-blue-700 transition shadow-lg shadow-primary/20 flex items-center">
+                        <i class="fa-solid fa-plus-circle mr-2 text-sm"></i> Add Product
+                    </button>
+                    <div class="flex items-center space-x-4 border-l border-slate-100 pl-8 cursor-pointer group">
+                        <div class="text-right">
+                            <p class="text-xs font-black text-secondary group-hover:text-primary transition">Md. Rahim</p>
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Store Owner</p>
+                        </div>
+                        <img src="https://i.pravatar.cc/100?u=kamal" class="w-12 h-12 rounded-2xl border-2 border-slate-50 group-hover:border-primary/20 transition-all shadow-sm" alt="">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Body -->
+            <div class="p-12 pb-24">
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+                    <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3">Net Sales</p>
+                        <h3 class="text-2xl font-black text-secondary tracking-tighter mb-4">৳145,200</h3>
+                        <div class="flex items-center text-[10px] font-black text-green-500 uppercase tracking-widest">
+                            <i class="fa-solid fa-arrow-up-long mr-2"></i> +12% this month
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3">Active Orders</p>
+                        <h3 class="text-2xl font-black text-secondary tracking-tighter mb-4">8</h3>
+                        <div class="flex items-center text-[10px] font-black text-blue-500 uppercase tracking-widest">
+                            3 Pending shipment
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3">Inventory</p>
+                        <h3 class="text-2xl font-black text-secondary tracking-tighter mb-4">24</h3>
+                        <div class="flex items-center text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                            2 Products out of stock
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3">Satisfaction</p>
+                        <h3 class="text-2xl font-black text-secondary tracking-tighter mb-4">4.9</h3>
+                        <div class="flex text-yellow-400 text-[8px] space-x-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-3 gap-10">
+                    <!-- Orders Table -->
+                    <div class="lg:col-span-2 bg-white rounded-[3.5rem] border border-slate-100 shadow-sm overflow-hidden hover:shadow-2xl transition duration-700">
+                        <div class="p-10 border-b border-slate-50 flex items-center justify-between">
+                            <h3 class="text-xl font-black text-secondary uppercase tracking-widest">Recent Sales</h3>
+                            <a href="#" class="text-xs font-black text-primary uppercase tracking-[0.2em] hover:underline">Manage All</a>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead class="bg-slate-50/50 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                                    <tr>
+                                        <th class="px-10 py-6">ID</th>
+                                        <th class="px-10 py-6">Product</th>
+                                        <th class="px-10 py-6">Amount</th>
+                                        <th class="px-10 py-6">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-50 text-sm font-bold text-slate-600">
+                                    <tr class="hover:bg-slate-50/50 transition">
+                                        <td class="px-10 py-8 text-secondary">#ORD-552</td>
+                                        <td class="px-10 py-8">Silk Sari</td>
+                                        <td class="px-10 py-8 text-secondary tracking-tighter text-lg">৳4,500</td>
+                                        <td class="px-10 py-8">
+                                            <button class="text-primary font-black text-xs uppercase tracking-widest hover:underline">Ship Now</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50/50 transition">
+                                        <td class="px-10 py-8 text-secondary">#ORD-551</td>
+                                        <td class="px-10 py-8">Cotton Panjabi</td>
+                                        <td class="px-10 py-8 text-secondary tracking-tighter text-lg">৳2,200</td>
+                                        <td class="px-10 py-8">
+                                            <span class="px-4 py-1.5 bg-green-50 text-green-600 text-[10px] font-black uppercase tracking-widest rounded-full">Shipped</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Performance Sidebar -->
+                    <div class="bg-white rounded-[3.5rem] border border-slate-100 shadow-sm p-10 hover:shadow-2xl transition duration-700">
+                        <h3 class="text-xl font-black text-secondary uppercase tracking-widest mb-10">Best Sellers</h3>
+                        <div class="space-y-10">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <h4 class="text-sm font-extrabold text-secondary">Premium Silk Sari</h4>
+                                    <span class="text-xs font-black text-primary uppercase tracking-widest">45 Sales</span>
+                                </div>
+                                <div class="w-full h-2 bg-slate-50 rounded-full overflow-hidden">
+                                    <div class="w-[85%] h-full bg-primary rounded-full shadow-lg shadow-primary/20"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <h4 class="text-sm font-extrabold text-secondary">Traditional Panjabi</h4>
+                                    <span class="text-xs font-black text-primary uppercase tracking-widest">32 Sales</span>
+                                </div>
+                                <div class="w-full h-2 bg-slate-50 rounded-full overflow-hidden">
+                                    <div class="w-[60%] h-full bg-accent rounded-full shadow-lg shadow-accent/20"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <h4 class="text-sm font-extrabold text-secondary">Silk Scarf</h4>
+                                    <span class="text-xs font-black text-primary uppercase tracking-widest">12 Sales</span>
+                                </div>
+                                <div class="w-full h-2 bg-slate-50 rounded-full overflow-hidden">
+                                    <div class="w-[25%] h-full bg-slate-200 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-16 pt-10 border-t border-slate-50">
+                            <button class="w-full py-5 rounded-2xl border-2 border-slate-100 text-slate-500 font-bold hover:border-primary hover:text-primary transition uppercase tracking-widest text-[10px]">Generate Sales Report</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Karim Ullah - REN Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#0f172a',
+                        accent: '#8b5cf6',
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-primary/10 selection:text-primary min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-4 py-4">
+        <div class="max-w-7xl mx-auto glass border border-white/20 rounded-2xl shadow-sm px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white shadow-lg">
+                    <i class="fa-solid fa-r text-xl font-black"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-secondary to-slate-600">REN</span>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-10">
+                <a href="index.html" class="text-sm font-bold text-slate-500 hover:text-primary transition">Home</a>
+                <a href="directory.html" class="text-sm font-bold text-primary flex items-center">
+                    <i class="fa-solid fa-chevron-left mr-2 text-[10px]"></i> Back to Directory
+                </a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="register.html" class="bg-secondary text-white px-6 py-3 rounded-xl text-sm font-bold hover:bg-slate-800 transition">Join Network</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Header -->
+    <header class="pt-40 pb-20 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center lg:items-end gap-12">
+                <div class="relative">
+                    <div class="w-48 h-48 rounded-[3.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="https://i.pravatar.cc/400?u=1" class="w-full h-full object-cover" alt="Founder Photo">
+                    </div>
+                    <div class="absolute -bottom-2 -right-2 w-12 h-12 bg-primary text-white rounded-2xl flex items-center justify-center border-4 border-white shadow-lg">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                </div>
+                <div class="flex-grow text-center lg:text-left">
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 mb-6">
+                        <span class="px-4 py-1.5 bg-blue-50 text-primary text-[10px] font-black uppercase tracking-[0.2em] rounded-full border border-blue-100">Verified Elite</span>
+                        <span class="px-4 py-1.5 bg-slate-50 text-slate-400 text-[10px] font-black uppercase tracking-[0.2em] rounded-full border border-slate-100">Handicrafts</span>
+                    </div>
+                    <h1 class="text-4xl lg:text-5xl font-black text-secondary mb-3">Md. Karim Ullah</h1>
+                    <p class="text-xl font-bold text-slate-400 mb-8">Founder of <span class="text-secondary tracking-tight">Ullah Handicrafts</span></p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-8">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-primary shadow-sm"><i class="fa-solid fa-location-dot"></i></div>
+                            <span class="text-xs font-black text-secondary uppercase tracking-widest">Rangpur, BD</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-primary shadow-sm"><i class="fa-solid fa-calendar-star"></i></div>
+                            <span class="text-xs font-black text-secondary uppercase tracking-widest">Joined 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <button class="px-8 py-4 bg-primary text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-blue-700 transition shadow-xl shadow-primary/20">Follow</button>
+                    <button class="w-14 h-14 rounded-2xl bg-white border-2 border-slate-100 text-slate-400 hover:text-primary transition flex items-center justify-center"><i class="fa-solid fa-share-nodes"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-16">
+                
+                <!-- Sidebar: Bio & Stats -->
+                <div class="space-y-12">
+                    <div class="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-sm">
+                        <h3 class="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-8">About the Founder</h3>
+                        <p class="text-slate-500 leading-loose mb-10 font-medium">Md. Karim Ullah is a visionary entrepreneur from the heart of Rangpur. With over 15 years of experience in traditional handicrafts, he has been at the forefront of digital transformation for local artisans.</p>
+                        <div class="space-y-6">
+                            <div class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Products</span>
+                                <span class="text-sm font-black text-secondary uppercase tracking-widest">12 Active</span>
+                            </div>
+                            <div class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Store Rating</span>
+                                <div class="flex items-center text-yellow-400 text-[10px] space-x-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <span class="text-secondary font-black ml-2">4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-secondary rounded-[3rem] p-10 text-white shadow-2xl">
+                        <h4 class="text-lg font-black mb-6">Contact Vendor</h4>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <i class="fa-solid fa-envelope text-primary"></i>
+                                <span class="text-sm font-medium opacity-60">karim@ullah.com.bd</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <i class="fa-solid fa-globe text-primary"></i>
+                                <span class="text-sm font-medium opacity-60">www.ullahcrafts.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center justify-between mb-12">
+                        <h2 class="text-2xl font-black text-secondary tracking-tight">Marketplace Storefront</h2>
+                        <a href="shop.html" class="text-xs font-black text-primary uppercase tracking-widest hover:underline">View All Item</a>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-10">
+                        <!-- Product 1 -->
+                        <div class="group bg-white rounded-[2.5rem] border border-slate-100 p-3 hover:shadow-2xl transition duration-500">
+                            <div class="h-64 rounded-[2rem] overflow-hidden relative mb-6 shadow-inner bg-slate-50">
+                                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="">
+                            </div>
+                            <div class="px-4 pb-6 text-center">
+                                <h3 class="font-extrabold text-lg text-secondary mb-2">Bamboo Desk Lamp</h3>
+                                <p class="text-primary font-black text-xl mb-6">৳1,200</p>
+                                <button class="w-full py-4 bg-slate-50 text-slate-600 rounded-xl font-bold hover:bg-secondary hover:text-white transition shadow-sm">View Product</button>
+                            </div>
+                        </div>
+                        <!-- Product 2 -->
+                        <div class="group bg-white rounded-[2.5rem] border border-slate-100 p-3 hover:shadow-2xl transition duration-500">
+                            <div class="h-64 rounded-[2rem] overflow-hidden relative mb-6 shadow-inner bg-slate-50">
+                                <img src="https://images.unsplash.com/photo-1544654803-b69140b285a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="">
+                            </div>
+                            <div class="px-4 pb-6 text-center">
+                                <h3 class="font-extrabold text-lg text-secondary mb-2">Artisan Pottery Set</h3>
+                                <p class="text-primary font-black text-xl mb-6">৳2,500</p>
+                                <button class="w-full py-4 bg-slate-50 text-slate-600 rounded-xl font-bold hover:bg-secondary hover:text-white transition shadow-sm">View Product</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-slate-400 py-24">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-[10px] font-black uppercase tracking-[0.3em]">&copy; 2026 Rangpur Entrepreneurs Network</p>
+        </div>
+    </footer>
+
+</body>
+</html>
